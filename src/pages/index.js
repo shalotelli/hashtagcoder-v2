@@ -1,4 +1,6 @@
 import React from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowDown} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -11,12 +13,16 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     
-    <div className="h-screen flex items-center pl-10">
-      <h1 className="flex text-4xl">
+    <div className="h-screen flex items-center">
+      <h1 className="flex text-4xl ml-10">
         <span rol="img" aria-label="wave">👋</span>
         &nbsp;
         <div>Hi, I'm Sha.</div>
       </h1>
+    </div>
+
+    <div className="absolute bottom-0 left-0 flex justify-center w-screen text-6xl text-gray-300 z-10">
+      <FontAwesomeIcon icon={faArrowDown} />
     </div>
 
     <div className="flex justify-center items-center">

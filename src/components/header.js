@@ -44,7 +44,11 @@ const Header = ({siteTitle}) => (
     <ul className="navigation">
       {links.map(link =>
         <li key={link.page}>
-          <Link to={`/${link.href}`}>{link.value}</Link>
+          <Link to={`/${link.href}`} 
+            className="hoverable" 
+            activeClassName="border-b border-dashed">
+            {link.value}
+          </Link>
         </li>
       )}
 
