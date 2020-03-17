@@ -7,9 +7,13 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
+
+import 'typeface-merriweather'
 
 import Header from './header'
+import Footer from './footer'
+
 import './layout.css'
 
 const Layout = ({children}) => {
@@ -26,19 +30,9 @@ const Layout = ({children}) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className="mx-auto w-10/12 p-2">
         <main>{children}</main>
-
-        <footer>
-          &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}<br />
-          Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer title={data.site.siteMetadata.title} />
       </div>
     </>
   )

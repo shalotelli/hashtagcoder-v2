@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-blue-500;
+  font-family: Merriweather, sans-serif;
 }
