@@ -1,0 +1,20 @@
+.skills {
+  @apply w-4/5 flex flex-wrap items-center justify-between m-auto;
+}
+
+.skill {
+  @apply w-2/4 p-2;
+}
+
+.skill span[role="img"] {
+  @apply text-5xl;
+}
+
+.skill .title {
+  font-weight: bold;
+  @apply text-lg;
+}
+
+.skill .content {
+  @apply leading-loose;
+}

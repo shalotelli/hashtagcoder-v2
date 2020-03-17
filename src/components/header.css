@@ -1,0 +1,7 @@
+.navigation {
+  @apply flex;
+}
+
+.navigation li {
+  @apply mr-5;
+}

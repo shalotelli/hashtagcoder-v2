@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import StyledHr from './styled-hr'
+
 const Footer = ({title}) => (
-  <footer className="fixed bottom-0">
+  <footer className="static bottom-0">
+    <StyledHr title="<footer>" />
     &copy; {new Date().getFullYear()} {title}<br />
     Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
   </footer>
