@@ -7,5 +7,5 @@
 }
 
 .navigation li a.hoverable:hover {
-  @apply border-b-2 border-gray-400 border-dashed;
+  @apply border-b border-gray-400 border-dashed;
 }

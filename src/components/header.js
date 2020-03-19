@@ -35,11 +35,11 @@ const links = [
 
 const Header = ({siteTitle}) => (
   <header className="mb-5 p-8 flex justify-between">
-    <h1 className="m-0 text-2xl">
+    <h3 className="m-0">
       <Link to="/">
         {siteTitle}
       </Link>
-    </h1>
+    </h3>
 
     <ul className="navigation">
       {links.map(link =>
@@ -53,25 +53,33 @@ const Header = ({siteTitle}) => (
       )}
 
       <li>
-        <a href="https://twitter.com/hashtagcoder" target="_blank">
+        <a href="https://twitter.com/hashtagcoder" 
+          target="_blank"
+          rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
       </li>
 
       <li>
-        <a href="https://www.instagram.com/hashtag_coder/" target="_blank">
+        <a href="https://www.instagram.com/hashtag_coder/" 
+          target="_blank"
+          rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram} />
         </a>
       </li>
 
       <li>
-        <a href="https://www.linkedin.com/in/sha-alibhai/" target="_blank">
+        <a href="https://www.linkedin.com/in/sha-alibhai/" 
+          target="_blank"
+          rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>
 
       <li>
-        <a href="https://github.com/shalotelli" target="_blank">
+        <a href="https://github.com/shalotelli" 
+          target="_blank"
+          rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </li>

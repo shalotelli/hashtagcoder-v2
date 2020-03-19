@@ -14,8 +14,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     
     <div className="h-screen flex items-center">
-      <h1 className="flex text-4xl ml-10">
-        <span rol="img" aria-label="wave">👋</span>
+      <h1 className="flex ml-10">
+        <span role="img" aria-label="wave">👋</span>
         &nbsp;
         <div>Hi, I'm Sha.</div>
       </h1>

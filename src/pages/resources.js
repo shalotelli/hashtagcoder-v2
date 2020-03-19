@@ -6,7 +6,7 @@ const ResourcesPage = () => (
   <Layout>
     <SEO title="Resources" />
 
-    <h1 className="text-5xl">Create a life you love through technology.</h1>
+    <h1>Create a life you love through technology.</h1>
   </Layout>
 )
 
