@@ -1,0 +1,35 @@
+---
+path: '/blog/a-review-of-web-components-in-2020'
+date: '2020-03-18'
+title: 'A Review of Web Components in 2020'
+---
+
+According to Google, somewhere between 5% and 8% of all page loads today use one or more web components. That makes web components one of the most successful new web platform features shipped in recent times.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/hashtag-coder.appspot.com/o/images%2Fpost-images%2Fusage-graph.png?alt=media&token=585c8c39-f2b1-4394-8ab3-f9f03f224f56" alt="Web Component Usage" width="100%" />
+
+We all know that reusing code as much as possible is a good idea. Components consist of three main technologies that can be used together to create versatile custom elements with encapsulated functionality that can be reused wherever you like.
+
+The first is the Custom Elements APIs. These are a set of JavaScript APIs that allow you to define custom elements and their behavior, which can then be used as desired in your user interface.
+
+The second is the Shadow DOM APIs. These are a set of JavaScript APIs for attaching an encapsulated "shadow" DOM tree to an element which is rendered separately from the main document DOM and controlling associated functionality. The Shadow DOM allows you to keep an element's features contained and private, so that effects and styled don’t conflict with other parts of the document.
+
+The final technology is HTML templates. The `<template>` and `<slot>` elements enable you to write markup templates that aren’t displayed on the rendered page.
+
+In other words, web components tell the browser when and where to make a component, but not how.
+
+The key difference between web components and proprietary component systems is interoperability. Because of their standard interface, you can use web components anywhere you'd use a built-in element like `<input>` or `<video>`.
+
+Because they can be expressed as real HTML, they can be rendered by all the popular frameworks. Your components can be consumed more widely, in a more diverse range of applications, without locking users into any one framework.
+
+This fact helps future-proof your applications when you update your tech stack. Instead of a giant step-change between one framework and another, where you replace all of your components, you can update your components one at a time.
+
+<img src="https://firebasestorage.googleapis.com/v0/b/hashtag-coder.appspot.com/o/images%2Fpost-images%2Fcaniuse-web-components.png?alt=media&token=b7938d1e-00a5-4ae3-bfbd-a4b0853d36fd" alt="Can I Use Web Components" width="100%" />
+
+According to caniuse.com, web components are in some way or another compatible with almost 90% of modern browsers, although mobile devices may have a hard time rendering some more complex components.
+
+In this series, we’re going to review 5 of the most popular web components tools right now - LitElement, Angular Elements, Stencil JS, Bit and Svelte JS. We’ll compare the website and documentation, community size and support and create a sample component in each. Finally we’ll sum up everything and make some recommendations on how and when to use each one.
+
+In the first part, we’ll look at LitElement along with lit-html, an efficient, expressive, extensible HTML templating library for JavaScript. LitElement is a lightweight base class that makes it easy to build and share Web Components. lit-html lets you write HTML templates in JavaScript using template literals with embedded JavaScript expressions. Behind the scenes lit-html creates HTML `<template>` elements from your JavaScript templates and processes them so that it knows exactly where to insert and update the values from expressions.
+
+Have you used LitElement or lit-html in a project? Comment below your thoughts.
