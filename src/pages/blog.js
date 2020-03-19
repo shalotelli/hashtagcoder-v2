@@ -1,35 +1,26 @@
 import React from 'react'
-import {useStaticQuery, graphql, Link} from 'gatsby'
+import {Link} from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import StyledHr from '../components/styled-hr'
+import {useBlogPostQuery} from '../hooks/use-blog-post-query'
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query BlogPostQuery {
-      allMarkdownRemark(limit: 1000, sort: {order: DESC, fields: frontmatter___date}) {
-        edges {
-          node {
-            frontmatter {
-              path
-              title
-            }
-          }
-        }
-      }
-    }
-  `)
-  
-  const {allMarkdownRemark: {edges: posts}} = data
+  const posts = useBlogPostQuery()
 
   return (
     <Layout>
       <SEO title="Blog" />
 
-      <ul>
-        {posts && posts.map(({node: {frontmatter: post}}, i) => (
+      <ul className="mb-48">
+        {posts && posts.map(({node: post}, i) => (
           <li>
-            <Link to={post.path} key={i}>{post.title}</Link>
+            <Link to={post.frontmatter.path} key={i}>
+              <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
+              <p>{post.excerpt}</p>
+              <StyledHr title="View Post" />
+            </Link>
           </li>
         ))}
       </ul>
