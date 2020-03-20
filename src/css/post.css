@@ -1,0 +1,23 @@
+.post p {
+  @apply mb-5 leading-loose;
+}
+
+.post code {
+  @apply bg-gray-200 text-red-500 text-sm p-1 rounded;
+}
+
+.post ol {
+  @apply list-decimal ml-10;
+}
+
+.post ul {
+  @apply list-disc ml-10;
+}
+
+.post li {
+  @apply mb-5;
+}
+
+.post li.task-list-item {
+  @apply list-none;
+}
