@@ -11,27 +11,53 @@ const links = [
   {
     href: 'blog',
     page: 'blog',
-    value: 'Blog'
+    value: 'Blog',
+    active: true
   },
 
   {
     href: 'learn',
     page: 'learn',
-    value: 'Learn'
+    value: 'Learn',
+    active: false
   },
 
   {
     href: 'mentorship',
     page: 'mentorship',
-    value: 'Mentorship'
+    value: 'Mentorship',
+    active: false
   },
 
   {
     href: 'resources',
     page: 'resources',
-    value: 'Resources'
+    value: 'Resources',
+    active: false
   }
-];
+]
+
+const social = [
+  {
+    href: 'https://twitter.com/hashtagcoder',
+    icon: faTwitter 
+  },
+
+  {
+    href: 'https://www.instagram.com/hashtag_coder/',
+    icon: faInstagram 
+  },
+
+  {
+    href: 'https://www.linkedin.com/in/sha-alibhai/',
+    icon: faLinkedin 
+  },
+
+  {
+    href: 'https://github.com/shalotelli',
+    icon: faGithub 
+  }
+]
 
 const Header = ({siteTitle}) => (
   <header className="mb-5 p-8 flex justify-between">
@@ -42,7 +68,7 @@ const Header = ({siteTitle}) => (
     </h3>
 
     <ul className="navigation">
-      {links.map(link =>
+      {links.filter(x => x.active).map(link => (
         <li key={link.page}>
           <Link to={`/${link.href}`} 
             className="hoverable" 
@@ -50,39 +76,17 @@ const Header = ({siteTitle}) => (
             {link.value}
           </Link>
         </li>
-      )}
+      ))}
 
-      <li>
-        <a href="https://twitter.com/hashtagcoder" 
-          target="_blank"
-          rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.instagram.com/hashtag_coder/" 
-          target="_blank"
-          rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faInstagram} />
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.linkedin.com/in/sha-alibhai/" 
-          target="_blank"
-          rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-      </li>
-
-      <li>
-        <a href="https://github.com/shalotelli" 
-          target="_blank"
-          rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-      </li>
+      {social.map(link => (
+        <li>
+          <a href={link.href} 
+            target="_blank"
+            rel="noopener noreferrer">
+            <FontAwesomeIcon icon={link.icon} />
+          </a>
+        </li>
+      ))}
     </ul>
   </header>
 )
