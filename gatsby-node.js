@@ -5,6 +5,7 @@
  */
 
 const path = require('path')
+const AppConfig = require('./app.config')
 
 exports.createPages = async ({actions, graphql, reporter}) => {
   const {createPage} = actions
@@ -39,4 +40,23 @@ exports.createPages = async ({actions, graphql, reporter}) => {
       context: {} // pass additional data here
     })
   })
+}
+
+exports.sourceNodes = ({actions, createNodeId, createContentDigest}) => {
+  const {createNode} = actions
+
+  const nodeMeta = {
+    id: createNodeId(`app-config`),
+    parent: null,
+    children: [],
+    internal: {
+      type: `AppConfig`,
+      mediaType: `text/html`,
+      content: JSON.stringify(AppConfig),
+      contentDigest: createContentDigest(AppConfig)
+    }
+  }
+
+  const node = Object.assign({}, AppConfig, nodeMeta)
+  createNode(node)
 }
