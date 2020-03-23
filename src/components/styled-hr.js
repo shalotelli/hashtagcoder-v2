@@ -1,11 +1,11 @@
 import React from 'react'
 import './styled-hr.css'
 
-const StyledHr = ({title, type}) => {
+const StyledHr = ({title, additionalClasses}) => {
   title = title || '<hr>';
 
   return (
-    <div className={`styled-hr ${type}`} title={title} />
+    <div className={`styled-hr ${additionalClasses}`} title={title} />
   )
 }
 

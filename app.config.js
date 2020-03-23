@@ -49,6 +49,12 @@ const AppConfig = {
       href: 'https://github.com/shalotelli',
       icon: 'github' 
     }
+  ],
+
+  recentVideos: [
+    'cNgsyMUqgLI',
+    'DwaM18QkwJY',
+    'OhN97rtB64U'
   ]
 }
 

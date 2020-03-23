@@ -1,20 +1,38 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowDown} from '@fortawesome/free-solid-svg-icons'
+import YouTube from 'react-youtube'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import StyledHr from '../components/styled-hr'
-import {useBlogPostQuery} from '../hooks/use-blog-post-query'
 
 import '../css/index.css'
 import MeImg from '../images/me.jpg'
 
-const IndexPage = () => {
-  const recentBlogPosts = useBlogPostQuery()
+export const dataQuery = graphql`
+{
+  appConfig {
+    recentVideos
+  }
+  allMarkdownRemark(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}) {
+    edges {
+      node {
+        frontmatter {
+          path
+          title
+        }
+        excerpt
+      }
+    }
+  }
+}
+`
 
-  console.log(recentBlogPosts)
+const IndexPage = ({data}) => {
+  const recentBlogPosts = data.allMarkdownRemark.edges
+  const recentVideos = data.appConfig.recentVideos
 
   return (
     <Layout>
@@ -67,14 +85,30 @@ const IndexPage = () => {
 
       <StyledHr title="Recent Blog Posts" />
 
-      <ul className="mb-48">
-        {recentBlogPosts && recentBlogPosts.slice(0, 5).map(({node: post}, i) => (
+      <ul className="mb-10">
+        {recentBlogPosts && recentBlogPosts.map(({node: post}, i) => (
           <li key={i}>
             <Link to={post.frontmatter.path}>
               <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
               <p>{post.excerpt}</p>
-              <StyledHr title="View Post" />
+              <StyledHr title="View Post" additionalClasses="w-1/2" />
             </Link>
+          </li>
+        ))}
+      </ul>
+
+      <StyledHr title="Recent Videos" />
+
+      <ul className="mb-48 flex flex-wrap justify-center">
+        {recentVideos && recentVideos.map((video, i) => (
+          <li key={i}>
+            <YouTube 
+              videoId={video}
+              className="mb-10"
+              opts={{
+                width: '560',
+                height: '315'
+              }} />
           </li>
         ))}
       </ul>
