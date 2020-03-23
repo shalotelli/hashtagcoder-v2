@@ -9,7 +9,9 @@ const AppConfig = require('./app.config')
 
 exports.createPages = async ({actions, graphql, reporter}) => {
   const {createPage} = actions
+  
   const postTemplate = path.resolve('src/templates/post.js')
+  const courseTemplate = path.resolve('src/templates/course.js')
 
   const result = await graphql(`
     {
@@ -34,9 +36,13 @@ exports.createPages = async ({actions, graphql, reporter}) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    const template = ~node.frontmatter.path.indexOf('/blog') ? 
+      postTemplate : 
+      courseTemplate
+
     createPage({
       path: node.frontmatter.path,
-      component: postTemplate,
+      component: template,
       context: {} // pass additional data here
     })
   })
