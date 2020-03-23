@@ -21,3 +21,11 @@
 .post li.task-list-item {
   @apply list-none;
 }
+
+.post a {
+  @apply underline text-blue-400;
+}
+
+.post a:hover, .post a:active {
+  @apply text-blue-600;
+}

@@ -18,14 +18,14 @@ const AppConfig = {
       href: 'mentorship',
       page: 'mentorship',
       value: 'Mentorship',
-      active: false
+      active: true
     },
   
     {
       href: 'resources',
       page: 'resources',
       value: 'Resources',
-      active: false
+      active: true
     }
   ],
 

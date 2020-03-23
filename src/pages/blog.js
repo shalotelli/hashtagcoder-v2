@@ -15,8 +15,8 @@ const BlogPage = () => {
 
       <ul className="mb-48">
         {posts && posts.map(({node: post}, i) => (
-          <li>
-            <Link to={post.frontmatter.path} key={i}>
+          <li key={i}>
+            <Link to={post.frontmatter.path}>
               <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
               <p>{post.excerpt}</p>
               <StyledHr title="View Post" />

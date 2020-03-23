@@ -69,8 +69,8 @@ const IndexPage = () => {
 
       <ul className="mb-48">
         {recentBlogPosts && recentBlogPosts.slice(0, 5).map(({node: post}, i) => (
-          <li>
-            <Link to={post.frontmatter.path} key={i}>
+          <li key={i}>
+            <Link to={post.frontmatter.path}>
               <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
               <p>{post.excerpt}</p>
               <StyledHr title="View Post" />

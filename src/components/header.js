@@ -51,8 +51,8 @@ const Header = ({siteTitle}) => {
           </li>
         ))}
 
-        {data.appConfig.socialLinks.map(link => (
-          <li>
+        {data.appConfig.socialLinks.map((link, i) => (
+          <li key={i}>
             <a href={link.href} 
               target="_blank"
               rel="noopener noreferrer">
