@@ -4,10 +4,28 @@ import {Link} from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import StyledHr from '../components/styled-hr'
-import {useBlogPostQuery} from '../hooks/use-blog-post-query'
 
-const BlogPage = () => {
-  const posts = useBlogPostQuery()
+export const dataQuery = graphql`
+{
+  appConfig {
+    recentVideos
+  }
+  allMarkdownRemark(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}) {
+    edges {
+      node {
+        frontmatter {
+          path
+          title
+        }
+        excerpt
+      }
+    }
+  }
+}
+`
+
+const BlogPage = ({data}) => {
+  const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout>
