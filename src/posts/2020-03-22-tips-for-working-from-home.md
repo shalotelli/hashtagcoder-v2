@@ -1,5 +1,5 @@
 ---
-path: "/blog/10-tips-for-working-from-hom"
+path: "/blog/10-tips-for-working-from-home"
 date: "2020-03-22"
 title: "10 Tips for working from home that actually work"
 ---

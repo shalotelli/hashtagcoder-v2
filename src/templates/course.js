@@ -3,11 +3,13 @@ import {graphql} from 'gatsby'
 import YouTube from 'react-youtube'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: {path: {eq: $path}}) {
       html
+      excerpt
       frontmatter {
         path
         title
@@ -19,10 +21,12 @@ export const pageQuery = graphql`
 
 export default function CourseTemplate({data}) {
   const {markdownRemark} = data
-  const {frontmatter, html} = markdownRemark
+  const {frontmatter, html, excerpt} = markdownRemark
 
   return (
     <Layout>
+      <SEO title={frontmatter.title} description={excerpt} />
+      
       <div className="course">
         <h1>{frontmatter.title}</h1>
 
