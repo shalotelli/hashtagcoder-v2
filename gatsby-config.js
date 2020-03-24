@@ -3,6 +3,7 @@ module.exports = {
     title: `Hashtag Coder`,
     description: `Technical tutorials, development and career advice predominantly focusing on JavaScript.`,
     author: `@hashtagcoder`,
+    siteUrl: 'https://hashtagcoder.dev'
   },
 
   plugins: [
@@ -49,8 +50,9 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/hashtagcoder-icon.png`,
       },
-      
     },
+    
+    'gatsby-plugin-robots-txt',
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
