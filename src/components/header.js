@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 
 import './header.css'
+import logo from '../images/hashtagcoder-icon.png'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTwitter, faInstagram, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
@@ -35,7 +36,8 @@ const Header = ({siteTitle}) => {
   return (
     <header className="mb-5 p-8 flex justify-between">
       <h3 className="m-0">
-        <Link to="/">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="logo" className="w-10 mr-1" />
           {siteTitle}
         </Link>
       </h3>
