@@ -29,8 +29,8 @@ Below i've listed 10 tips that have helped me work successfully remotely (with a
 9. **Value your time.** Pomodoro is a pretty good technique to try [https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730](https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730)
 
 10. **Set up your technology.** Some of the tools I use are:
-  - *Zoom* - For video conferencing
-  - *Slack* - For real time chat
-  - *Notion* - For documentation and collaboration
-  - *GSuite or Sharepoint* - For spreadsheets, simple docs etc
-  - *A comfortable pair of headphones* - If you're in meetings all day you'll appreciate a good pair of headphones
+    - *Zoom* - For video conferencing
+    - *Slack* - For real time chat
+    - *Notion* - For documentation and collaboration
+    - *GSuite or Sharepoint* - For spreadsheets, simple docs etc
+    - *A comfortable pair of headphones* - If you're in meetings all day you'll appreciate a good pair of headphones
