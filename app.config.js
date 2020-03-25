@@ -48,6 +48,11 @@ const AppConfig = {
     {
       href: 'https://github.com/shalotelli',
       icon: 'github' 
+    },
+
+    {
+      href: 'https://youtube.com/c/hashtagcoder',
+      icon: 'youtube'
     }
   ],
 

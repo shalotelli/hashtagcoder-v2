@@ -6,13 +6,20 @@ import './header.css'
 import logo from '../images/hashtagcoder-icon.png'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faTwitter, faInstagram, faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
+import {
+  faTwitter, 
+  faInstagram, 
+  faLinkedin, 
+  faGithub,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
 
 const socialIconsMap = {
   twitter: faTwitter,
   instagram: faInstagram,
   linkedin: faLinkedin,
-  github: faGithub
+  github: faGithub,
+  youtube: faYoutube
 }
 
 const Header = ({siteTitle}) => {
