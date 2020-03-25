@@ -15,7 +15,7 @@
 }
 
 .post li {
-  @apply mb-5;
+  @apply mb-5 leading-loose;
 }
 
 .post li.task-list-item {
