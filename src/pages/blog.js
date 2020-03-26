@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import StyledHr from '../components/styled-hr'
+import Post from '../components/post'
 
 export const dataQuery = graphql`
 {
@@ -11,36 +11,26 @@ export const dataQuery = graphql`
     edges {
       node {
         frontmatter {
+          date(formatString: "MMMM DD, YYYY")
           path
           title
         }
         excerpt
+        timeToRead
       }
     }
   }
 }
 `
 
-const BlogPage = ({data}) => {
-  const posts = data.allMarkdownRemark.edges
+const BlogPage = ({data}) => (
+  <Layout>
+    <SEO title="Blog" />
 
-  return (
-    <Layout>
-      <SEO title="Blog" />
-
-      <ul className="mb-48">
-        {posts && posts.map(({node: post}, i) => (
-          <li key={i}>
-            <Link to={post.frontmatter.path}>
-              <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
-              <p>{post.excerpt}</p>
-              <StyledHr title="View Post" />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </Layout>
-  )
-}
+    <div className="mb-48">
+      {data.allMarkdownRemark.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
+    </div>
+  </Layout>
+)
 
 export default BlogPage

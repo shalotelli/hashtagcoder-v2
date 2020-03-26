@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowDown} from '@fortawesome/free-solid-svg-icons'
 import YouTube from 'react-youtube'
@@ -7,6 +7,7 @@ import YouTube from 'react-youtube'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import StyledHr from '../components/styled-hr'
+import Post from '../components/post'
 
 import '../css/index.css'
 import MeImg from '../images/me.jpg'
@@ -20,10 +21,12 @@ export const dataQuery = graphql`
     edges {
       node {
         frontmatter {
+          date(formatString: "MMMM DD, YYYY")
           path
           title
         }
         excerpt
+        timeToRead
       }
     }
   }
@@ -85,17 +88,9 @@ const IndexPage = ({data}) => {
 
       <StyledHr title="Recent Blog Posts" />
 
-      <ul className="mb-10">
-        {recentBlogPosts && recentBlogPosts.map(({node: post}, i) => (
-          <li key={i}>
-            <Link to={post.frontmatter.path}>
-              <h4 className="underline text-blue-400 hover:text-blue-600">{post.frontmatter.title}</h4>
-              <p>{post.excerpt}</p>
-              <StyledHr title="View Post" additionalClasses="w-1/2" />
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="mb-10">
+        {recentBlogPosts.map(({node: post}, i) => <Post data={post} key={i} />)}
+      </div>
 
       <StyledHr title="Recent Videos" />
 

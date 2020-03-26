@@ -10,6 +10,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: {path: {eq: $path}}) {
       html
       excerpt
+      timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
@@ -21,7 +22,7 @@ export const pageQuery = graphql`
 
 export default function PostTemplate({data}) {
   const {markdownRemark} = data
-  const {frontmatter, html, excerpt} = markdownRemark
+  const {frontmatter, html, excerpt, timeToRead} = markdownRemark
 
   return (
     <Layout>
@@ -29,7 +30,7 @@ export default function PostTemplate({data}) {
 
       <div className="post">
         <h1>{frontmatter.title}</h1>
-        <h5 className="text-gray-400">{frontmatter.date}</h5>
+        <h5 className="text-gray-400">{frontmatter.date}, {timeToRead} min read</h5>
 
         <div className="py-10" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
