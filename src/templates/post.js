@@ -1,5 +1,7 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {Link, graphql} from 'gatsby'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -27,6 +29,16 @@ export default function PostTemplate({data}) {
   return (
     <Layout>
       <SEO title={frontmatter.title} description={excerpt} />
+
+      <nav class="text-sm my-3" aria-label="Breadcrumb">
+        <ul class="list-none p-0 inline-flex">
+          <li>
+            <Link to="/blog" className="underline text-blue-400 hover:text-blue-600">Blog</Link>
+            <FontAwesomeIcon icon={faCaretRight} className="mx-3" />
+          </li>
+          <li className="text-gray-500">{frontmatter.title}</li>
+        </ul>
+      </nav>
 
       <div className="post">
         <h1>{frontmatter.title}</h1>
