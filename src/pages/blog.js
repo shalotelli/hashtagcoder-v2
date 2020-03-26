@@ -7,9 +7,6 @@ import StyledHr from '../components/styled-hr'
 
 export const dataQuery = graphql`
 {
-  appConfig {
-    recentVideos
-  }
   allMarkdownRemark(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}) {
     edges {
       node {

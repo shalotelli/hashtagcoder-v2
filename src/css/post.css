@@ -6,6 +6,14 @@
   @apply bg-gray-200 text-red-500 text-sm p-1 rounded;
 }
 
+.post .gatsby-highlight {
+  @apply text-xs;
+}
+
+.post .gatsby-highlight code {
+  @apply bg-transparent;
+}
+
 .post ol {
   @apply list-decimal ml-10;
 }
