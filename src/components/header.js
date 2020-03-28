@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 
-import './header.css'
+import '../css/header.css'
 import logo from '../images/hashtagcoder-icon.png'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -13,6 +13,7 @@ import {
   faGithub,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const socialIconsMap = {
   twitter: faTwitter,
@@ -40,18 +41,30 @@ const Header = ({siteTitle}) => {
     }
   `)
 
-  return (
-    <header className="mb-5 p-8 flex justify-between">
-      <h3 className="m-0">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="logo" className="w-10 mr-1" />
-          {siteTitle}
-        </Link>
-      </h3>
+  const [showNav, setShowNav] = useState(false)
 
-      <ul className="navigation">
+  return (
+    <header className="p-2 sm:p-8 sm:flex justify-between items-center">
+      <div className="mb-3 sm:mb-0 flex justify-between items-center">
+        <div className="text-2xl sm:text-3xl m-0">
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="logo" className="w-10 mr-1" />
+            {siteTitle}
+          </Link>
+        </div>
+
+        <div className="sm:hidden">
+          <button type="button" 
+            className="hover:text-gray-500 focus:text-gray-500 focus:outline-none"
+            onClick={() => setShowNav(!showNav)}>
+            <FontAwesomeIcon icon={showNav ? faTimes : faBars} />
+          </button>
+        </div>
+      </div>
+
+      <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex z-10 ${showNav ? 'relative' : 'hidden'}`}>
         {data.appConfig.navigation.filter(x => x.active).map(link => (
-          <li key={link.page}>
+          <li className="mb-2 sm:mb-0" key={link.page}>
             <Link to={`/${link.href}`} 
               className="hoverable" 
               activeClassName="border-b border-dashed">
@@ -61,7 +74,7 @@ const Header = ({siteTitle}) => {
         ))}
 
         {data.appConfig.socialLinks.map((link, i) => (
-          <li key={i}>
+          <li className="hidden sm:block" key={i}>
             <a href={link.href} 
               target="_blank"
               rel="noopener noreferrer">
