@@ -29,20 +29,22 @@ const CoursesPage = ({data}) => {
     <Layout>
       <SEO title="Courses" />
 
-      <h1>Programmer <small><em>(noun)</em></small></h1>
-      <h4>A person who fixed a problem that you don't know you have, in a way you don't understand.</h4>
+      <div className="my-24 sm:my-32">
+        <h1>Programmer <small><em>(noun)</em></small></h1>
+        <h4>A person who fixed a problem that you don't know you have, in a way you don't understand.</h4>
 
-      <ul className="mt-10 mb-48">
-        {courses && courses.map(({node: course}, i) => (
-          <li key={i}>
-            <Link to={course.frontmatter.path}>
-              <h4 className="underline text-blue-400 hover:text-blue-600">{course.frontmatter.title}</h4>
-              <p>{course.excerpt}</p>
-              <StyledHr title="View Course" />
-            </Link>
-          </li>
-        ))}
-      </ul>
+        <ul className="mt-10 mb-48">
+          {courses && courses.map(({node: course}, i) => (
+            <li key={i}>
+              <Link to={course.frontmatter.path}>
+                <h4 className="underline text-blue-400 hover:text-blue-600">{course.frontmatter.title}</h4>
+                <p>{course.excerpt}</p>
+                <StyledHr title="View Course" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Layout>
   )
 }

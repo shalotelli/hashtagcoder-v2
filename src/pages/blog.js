@@ -27,7 +27,7 @@ const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Blog" />
 
-    <div className="mb-48">
+    <div className="my-24 sm:my-32">
       {data.allMarkdownRemark.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
     </div>
   </Layout>
