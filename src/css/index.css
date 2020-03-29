@@ -1,20 +1,38 @@
 .skills {
-  @apply w-4/5 flex flex-wrap items-center justify-between m-auto;
+  @apply flex flex-wrap flex-col items-center justify-between m-auto;
 }
 
 .skill {
-  @apply w-2/4 p-2;
+  @apply w-11/12 mb-5 text-sm text-center;
 }
 
 .skill span[role="img"] {
-  @apply text-5xl;
+  @apply text-6xl;
 }
 
 .skill .title {
   font-weight: bold;
-  @apply text-lg;
+  @apply text-xl;
 }
 
 .skill .content {
   @apply leading-loose;
+}
+
+@screen sm {
+  .skills {
+    @apply flex-row w-4/5;
+  }
+
+  .skill {
+    @apply w-2/4 p-2 mb-0 text-base text-left;
+  }
+
+  .skill span[role="img"] {
+    @apply text-5xl;
+  }
+  
+  .skill .title {
+    @apply text-lg;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './styled-hr.css'
+import '../css/styled-hr.css'
 
 const StyledHr = ({title, additionalClasses}) => {
   title = title || '<hr>';

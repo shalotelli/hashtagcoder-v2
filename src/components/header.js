@@ -44,6 +44,7 @@ const Header = ({siteTitle}) => {
   const [showNav, setShowNav] = useState(false)
 
   return (
+    <div className="absolute top-0 z-10 w-full">
     <header className="p-2 sm:p-8 sm:flex justify-between items-center">
       <div className="mb-3 sm:mb-0 flex justify-between items-center">
         <div className="text-2xl sm:text-3xl m-0">
@@ -62,7 +63,7 @@ const Header = ({siteTitle}) => {
         </div>
       </div>
 
-      <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex z-10 ${showNav ? 'relative' : 'hidden'}`}>
+      <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex ${showNav ? 'relative' : 'hidden'}`}>
         {data.appConfig.navigation.filter(x => x.active).map(link => (
           <li className="mb-2 sm:mb-0" key={link.page}>
             <Link to={`/${link.href}`} 
@@ -84,6 +85,7 @@ const Header = ({siteTitle}) => {
         ))}
       </ul>
     </header>
+    </div>
   )
 }
 

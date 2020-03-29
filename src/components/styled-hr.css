@@ -1,9 +1,0 @@
-.styled-hr {
-  @apply w-full my-16 mx-auto relative flex items-center justify-center border border-gray-200;
-  font-family: Merriweather, sans-serif;
-}
-
-.styled-hr:before {
-  @apply text-gray-200 text-center text-3xl absolute bg-white py-0 px-5;
-  content: attr(title);
-}

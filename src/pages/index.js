@@ -2,12 +2,12 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowDown} from '@fortawesome/free-solid-svg-icons'
-import YouTube from 'react-youtube'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import StyledHr from '../components/styled-hr'
 import Post from '../components/post'
+import YouTube from '../components/youtube'
 
 import '../css/index.css'
 import MeImg from '../images/me.jpg'
@@ -42,20 +42,20 @@ const IndexPage = ({data}) => {
       <SEO title="Home" />
       
       <div className="h-screen flex items-center">
-        <h1 className="flex ml-10">
+        <h1 className="flex text-4xl sm:text-5xl sm:ml-10">
           <span role="img" aria-label="wave">👋</span>
           &nbsp;
           <div>Hi, I'm Sha.</div>
         </h1>
       </div>
 
-      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-6xl text-gray-300 z-10">
+      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-5xl sm:text-6xl text-gray-300 z-10">
         <FontAwesomeIcon icon={faArrowDown} />
       </div>
 
-      <div className="flex justify-center items-center">
-        <img src={MeImg} alt="Sha Alibhai" className="w-64 h-64 rounded-full" />
-        <p className="ml-10 w-5/12 leading-relaxed">I'm a self taught software developer with almost 15 years experience. I'm passionate about using the lessons I've learnt to teach others how to maximize on their opportunities and grow to become the best version of themselves. Currently, I'm the Director of Engineering for an awesome company in the Medical Transportation space.</p>
+      <div className="flex flex-col sm:flex-row justify-center items-center">
+        <img src={MeImg} alt="Sha Alibhai" className="w-48 h-48 sm:w-64 sm:h-64 rounded-full" />
+        <p className="sm:ml-10 sm:w-5/12 p-5 sm:p-0 leading-relaxed">I'm a self taught software developer with almost 15 years experience. I'm passionate about using the lessons I've learnt to teach others how to maximize on their opportunities and grow to become the best version of themselves. Currently, I'm the Director of Engineering for an awesome company in the Medical Transportation space.</p>
       </div>
 
       <StyledHr />
@@ -88,25 +88,19 @@ const IndexPage = ({data}) => {
 
       <StyledHr title="Recent Blog Posts" />
 
-      <div className="mb-10">
+      <div className="mb-10 px-5 sm:px-0">
         {recentBlogPosts.map(({node: post}, i) => <Post data={post} key={i} />)}
       </div>
 
       <StyledHr title="Recent Videos" />
 
-      <ul className="mb-48 flex flex-wrap justify-center">
+      <div className="mb-10 p-5">
         {recentVideos && recentVideos.map((video, i) => (
-          <li key={i}>
-            <YouTube 
-              videoId={video}
-              className="mb-10"
-              opts={{
-                width: '560',
-                height: '315'
-              }} />
-          </li>
+          <div key={i} className="mb-5">
+            <YouTube video={video} />
+          </div>
         ))}
-      </ul>
+      </div>
     </Layout>
   )
 }
