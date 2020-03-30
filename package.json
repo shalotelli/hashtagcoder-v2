@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "hashtagcover-v2",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Technical tutorials, development and career advice predominantly focusing on JavaScript",
+  "version": "2.1.0",
+  "author": "Sha Alibhai <shalotelli@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
