@@ -42,6 +42,23 @@ const Header = ({siteTitle}) => {
   `)
 
   const [showNav, setShowNav] = useState(false)
+  const [navAnimation, setNavAnimation] = useState('fadeInRight')
+
+  const toggleShowNav = () => {
+    let animation = 'fadeIn'
+    let timeout = 100
+
+    if (showNav) {
+      animation = 'fadeOut'
+      timeout = 500
+    } else {
+      animation = 'fadeIn'
+      timeout = 100
+    }
+    
+    setNavAnimation(animation)
+    setTimeout(() => setShowNav(!showNav), timeout)
+  }
 
   return (
     <div className="absolute top-0 z-10 w-full">
@@ -57,13 +74,13 @@ const Header = ({siteTitle}) => {
         <div className="sm:hidden">
           <button type="button" 
             className="hover:text-gray-500 focus:text-gray-500 focus:outline-none"
-            onClick={() => setShowNav(!showNav)}>
+            onClick={() => toggleShowNav()}>
             <FontAwesomeIcon icon={showNav ? faTimes : faBars} />
           </button>
         </div>
       </div>
 
-      <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex ${showNav ? 'relative' : 'hidden'}`}>
+      <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex animated ${navAnimation} ${showNav ? 'relative' : 'hidden'}`}>
         {data.appConfig.navigation.filter(x => x.active).map(link => (
           <li className="mb-2 sm:mb-0" key={link.page}>
             <Link to={`/${link.href}`} 

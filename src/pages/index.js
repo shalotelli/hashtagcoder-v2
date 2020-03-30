@@ -43,7 +43,7 @@ const IndexPage = ({data}) => {
       
       <div className="h-screen flex items-center">
         <h1 className="flex text-4xl sm:text-5xl sm:ml-10">
-          <span role="img" aria-label="wave">👋</span>
+          <span role="img" aria-label="wave" className="animated tada delay-1s">👋</span>
           &nbsp;
           <div>Hi, I'm Sha.</div>
         </h1>
