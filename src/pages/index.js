@@ -49,7 +49,7 @@ const IndexPage = ({data}) => {
         </h1>
       </div>
 
-      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-5xl sm:text-6xl text-gray-300 z-10">
+      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-5xl sm:text-6xl text-gray-300 z-10 animated bounce">
         <FontAwesomeIcon icon={faArrowDown} />
       </div>
 
