@@ -57,7 +57,7 @@ const MentorshipPage = () => (
             image={GoalsImg} />
 
           <MentorshipCard 
-            title="Having 'Rubber duck' sessions to think through ideas" 
+            title={`Having "rubber duck" sessions to think through ideas`} 
             image={DuckImg} />
 
           <MentorshipCard 

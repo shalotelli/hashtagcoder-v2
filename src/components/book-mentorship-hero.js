@@ -14,7 +14,7 @@ const BookMentorshipHero = () => {
 
       <div className="p-5">
         <h5 className="text-gray-800">30 Minute Mentorship Session</h5>
-        <p className="text-gray-600">Some description text</p>
+        <p className="text-gray-600 text-sm">Spend 30 minutes with me talking through career growth, goals, or code.</p>
       </div>
 
       <div className="flex flex-grow items-center justify-end p-5">
