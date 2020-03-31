@@ -91,15 +91,17 @@ const Header = ({siteTitle}) => {
           </li>
         ))}
 
-        {data.appConfig.socialLinks.map((link, i) => (
-          <li className="hidden sm:block" key={i}>
-            <a href={link.href} 
-              target="_blank"
-              rel="noopener noreferrer">
-              <FontAwesomeIcon icon={socialIconsMap[link.icon]} />
-            </a>
-          </li>
-        ))}
+        <div className="flex">
+          {data.appConfig.socialLinks.map((link, i) => (
+            <li key={i}>
+              <a href={link.href} 
+                target="_blank"
+                rel="noopener noreferrer">
+                <FontAwesomeIcon icon={socialIconsMap[link.icon]} />
+              </a>
+            </li>
+          ))}
+        </div>
       </ul>
     </header>
     </div>
