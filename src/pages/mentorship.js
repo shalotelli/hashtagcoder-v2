@@ -2,16 +2,20 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import MentorshipCard from '../components/mentorship-card'
+import BookMentorshipHero from '../components/book-mentorship-hero'
 
 import HeroImg from '../images/austin-distel-wD1LRb9OeEo-unsplash.jpg'
+import ResumeImg from '../images/bram-naus-n8Qb1ZAkK88-unsplash.jpg'
+import CareerImg from '../images/saulo-mohana-wNz7_5EvUWU-unsplash.jpg'
+import FeedbackImg from '../images/dmitry-ratushny-O33IVNPb0RI-unsplash.jpg'
+import DuckImg from '../images/timothy-dykes-LhqLdDPcSV8-unsplash.jpg'
+import GoalsImg from '../images/isaac-smith-8XlMU62ii8I-unsplash.jpg'
+import PerspectiveImg from '../images/anika-huizinga-RmzR87vTiYw-unsplash.jpg'
+import CommunicationImg from '../images/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.jpg'
+import SkillsImg from '../images/kelly-sikkema-N3o-leQyFsI-unsplash.jpg'
 
-const MentorshipPage = () => {
-  const date = new Date()
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-  date.setDate(date.getDate() + 1)
-
-  return (
+const MentorshipPage = () => (
     <Layout>
       <SEO title="Mentorship" />
 
@@ -27,27 +31,51 @@ const MentorshipPage = () => {
           </div>
         </div>
 
-        <div className="bg-white shadow-md rounded-lg overflow-hidden flex flex-col sm:flex-row sm:h-24 m-4 sm:m-24">
-          <div className="bg-blue-500 text-white 
-          text-center sm:w-24 flex flex-col align-center justify-center leading-tight p-3 sm:p-0">
-            <div className="text-4xl">{date.getDate()}</div>
-            <div className="text-xl">{months[date.getMonth()]}</div>
-          </div>
+        <BookMentorshipHero />
 
-          <div className="p-5">
-            <h5 className="text-gray-800">30 Minute Mentorship Session</h5>
-            <p className="text-gray-600">Some description text</p>
-          </div>
+        <p>One of my biggest career regrets is that I isolated myself too much. Having spent most of my time working remotely, I tried to do everything myself without seeking help from others. It took me a while to realize that finding a mentor is a crucuial step of the learning process. A mentor provides feedback and helps creates growth paths where there otherwise wouldn't be any. Talent is not a replacement for experience.</p>
 
-          <div className="flex flex-grow items-center justify-end p-5">
-            <a href="https://calendly.com/hashtagcoder/30min" target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full sm:w-auto text-center">
-              Book a Session
-            </a>
-          </div>
+        <p>No matter where you are in your career or coding education, having someone to turn to for advice and feedback can make all the difference. Having been there and done that for a while, I feel like I have a lot of experience to share and would love to offer my time so others can benefit in the same way I have.</p>
+
+        <p>Some of the things I can help you with during our 1-1 sessions:</p>
+
+        <div className="my-10 flex flex-wrap justify-center">
+          <MentorshipCard 
+            title="Creating or refining your resume to stand out from others" 
+            image={ResumeImg} />
+
+          <MentorshipCard 
+            title="Finding a job or figuring out your career path" 
+            image={CareerImg} />
+
+          <MentorshipCard 
+            title="Providing valuable feedback on your plans and work" 
+            image={FeedbackImg} />
+
+          <MentorshipCard 
+            title="Creating SMART goals and defining a plan to achieve them" 
+            image={GoalsImg} />
+
+          <MentorshipCard 
+            title="Having 'Rubber duck' sessions to think through ideas" 
+            image={DuckImg} />
+
+          <MentorshipCard 
+            title="Getting a different perspective and learning new ways of thinking" 
+            image={PerspectiveImg} />
+
+          <MentorshipCard 
+            title="Improving communication skills and speaking more effectively" 
+            image={CommunicationImg} />
+
+          <MentorshipCard 
+            title="Advancing your career and talking through skill development" 
+            image={SkillsImg} />
         </div>
+
+        <BookMentorshipHero />
       </div>
     </Layout>
-  )
-}
+)
 
 export default MentorshipPage

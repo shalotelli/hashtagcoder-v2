@@ -26,6 +26,10 @@ h5 {
   @apply text-lg;
 }
 
+p {
+  @apply mb-5 leading-loose;
+}
+
 @screen sm {
   h1 {
     @apply text-5xl;
