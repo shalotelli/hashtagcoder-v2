@@ -17,7 +17,7 @@ export const dataQuery = graphql`
   appConfig {
     recentVideos
   }
-  allMarkdownRemark(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}) {
+  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.mdx?$/"}}) {
     edges {
       node {
         frontmatter {
@@ -34,7 +34,7 @@ export const dataQuery = graphql`
 `
 
 const IndexPage = ({data}) => {
-  const recentBlogPosts = data.allMarkdownRemark.edges
+  const recentBlogPosts = data.allMdx.edges
   const recentVideos = data.appConfig.recentVideos
 
   return (

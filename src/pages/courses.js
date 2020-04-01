@@ -7,7 +7,7 @@ import StyledHr from '../components/styled-hr'
 
 export const courses = graphql`
   query CourseQuery {
-    allMarkdownRemark(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(courses)/.*\\\\.md$/"}}) {
+    allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(courses)/.*\\\\.mdx?$/"}}) {
       edges {
         node {
           frontmatter {
@@ -22,8 +22,8 @@ export const courses = graphql`
 `
 
 const CoursesPage = ({data}) => {
-  const {allMarkdownRemark} = data
-  const {edges: courses} = allMarkdownRemark
+  const {allMdx} = data
+  const {edges: courses} = allMdx
 
   return (
     <Layout>

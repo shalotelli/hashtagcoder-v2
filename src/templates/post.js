@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
+import {MDXRenderer} from 'gatsby-plugin-mdx'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 
@@ -9,8 +10,8 @@ import '../css/post.css'
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
-      html
+    mdx(frontmatter: {path: {eq: $path}}) {
+      body
       excerpt
       timeToRead
       frontmatter {
@@ -23,8 +24,8 @@ export const pageQuery = graphql`
 `
 
 export default function PostTemplate({data}) {
-  const {markdownRemark} = data
-  const {frontmatter, html, excerpt, timeToRead} = markdownRemark
+  const {mdx} = data
+  const {frontmatter, body, excerpt, timeToRead} = mdx
 
   return (
     <Layout>
@@ -45,7 +46,7 @@ export default function PostTemplate({data}) {
           <h1>{frontmatter.title}</h1>
           <h5 className="text-gray-400">{frontmatter.date}, {timeToRead} min read</h5>
 
-          <div className="py-10" dangerouslySetInnerHTML={{ __html: html }} />
+          <MDXRenderer>{body}</MDXRenderer>
         </div>
       </div>
     </Layout>

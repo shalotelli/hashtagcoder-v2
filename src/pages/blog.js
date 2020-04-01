@@ -7,7 +7,7 @@ import Post from '../components/post'
 
 export const dataQuery = graphql`
 {
-  allMarkdownRemark(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}) {
+  allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.mdx?$/"}}) {
     edges {
       node {
         frontmatter {
@@ -28,7 +28,7 @@ const BlogPage = ({data}) => (
     <SEO title="Blog" />
 
     <div className="my-24 sm:my-32">
-      {data.allMarkdownRemark.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
+      {data.allMdx.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
     </div>
   </Layout>
 )

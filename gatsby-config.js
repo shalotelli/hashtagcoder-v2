@@ -55,6 +55,23 @@ module.exports = {
     },
 
     {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '›',
+              showLineNumbers: false,
+              noInlineHighlight: false
+            }
+          }
+        ]
+      }
+    },
+
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Hashtag Coder`,
@@ -82,8 +99,8 @@ module.exports = {
       options: {
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
@@ -95,9 +112,9 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.md$/"}}
+                  filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.mdx?$/"}}
                 ) {
                   edges {
                     node {

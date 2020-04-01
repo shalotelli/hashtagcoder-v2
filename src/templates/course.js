@@ -1,5 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
+import {MDXRenderer} from 'gatsby-plugin-mdx'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -7,8 +8,8 @@ import YouTube from '../components/youtube'
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
-      html
+    mdx(frontmatter: {path: {eq: $path}}) {
+      body
       excerpt
       frontmatter {
         path
@@ -20,8 +21,8 @@ export const pageQuery = graphql`
 `
 
 export default function CourseTemplate({data}) {
-  const {markdownRemark} = data
-  const {frontmatter, html, excerpt} = markdownRemark
+  const {mdx} = data
+  const {frontmatter, body, excerpt} = mdx
 
   return (
     <Layout>
@@ -29,8 +30,8 @@ export default function CourseTemplate({data}) {
       
       <div className="course my-24 sm:my-32">
         <h1>{frontmatter.title}</h1>
-
-        <div className="py-10" dangerouslySetInnerHTML={{ __html: html }} />
+        
+        <MDXRenderer>{body}</MDXRenderer>
 
         {frontmatter.videos.map((video, i) => (
           <div className="mb-10">
