@@ -7,7 +7,7 @@ import StyledHr from '../components/styled-hr'
 
 export const courses = graphql`
   query CourseQuery {
-    allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(courses)/.*\\\\.mdx?$/"}}) {
+    allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "courses"}}}) {
       edges {
         node {
           frontmatter {

@@ -66,3 +66,17 @@ exports.sourceNodes = ({actions, createNodeId, createContentDigest}) => {
   const node = Object.assign({}, AppConfig, nodeMeta)
   createNode(node)
 }
+
+exports.onCreateNode = ({node, actions, getNode}) => {
+  const {createNodeField} = actions
+
+  
+  // add collection field to markdown files for filtering
+  if (node.internal.type === `Mdx`) {
+    createNodeField({
+      name: `collection`,
+      node,
+      value: getNode(node.parent).sourceInstanceName,
+    })
+  }
+}

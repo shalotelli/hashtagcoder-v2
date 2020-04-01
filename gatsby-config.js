@@ -114,7 +114,7 @@ module.exports = {
               {
                 allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.mdx?$/"}}
+                  filter: {fields: {collection: {eq: "posts"}}}
                 ) {
                   edges {
                     node {

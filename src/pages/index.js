@@ -17,7 +17,7 @@ export const dataQuery = graphql`
   appConfig {
     recentVideos
   }
-  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fileAbsolutePath: {regex: "/(posts)/.*\\\\.mdx?$/"}}) {
+  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
     edges {
       node {
         frontmatter {
