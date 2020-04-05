@@ -1,0 +1,129 @@
+---
+path: '/blog/5-things-you-can-do-with-only-html'
+date: '2020-04-06'
+title: "5 things you didn't know you could do with only HTML"
+---
+
+import StyledHr from '../../components/styled-hr.js'
+import CustomDialog from './custom-dialog.js'
+import Autocomplete from './autocomplete.js'
+import Accordion from './accordion.js'
+import Datepicker from './datepicker.js'
+import Edits from './edits'
+
+I've been seeing finding a lot of cool things that HTML can do by itself recently and decide to compile a list of a few of them (width code of course) to demonstrate what i've found.
+
+_Some of these won't work on your browser. I've only tested on the latest version of Chrome. To find out if compatibility, check [caniuse.com](caniuse.com)._
+
+<StyledHr />
+
+# Dialog Boxes
+
+Dialog boxes are popups that open over your content. Up to now i've had to make do with "alerts" or using frameworks like Twitter Bootstrap to create modals. HTML actually has a `<dialog />` element we can use and style out of the box.
+
+### Code
+
+```html
+<dialog open="true">
+  <p>Add some content</p>
+</dialog>
+```
+
+<br />
+
+### Demo
+<CustomDialog />
+
+<StyledHr />
+
+# Autocompletes
+
+The first time I learnt how to create an autocomplete element was when I first learnt the Twitter Bootstrap framework. It's amazing to see that you can now just use pure HTML to achieve the same thing. The best thing is that it's such a simple change to convert an existing `<input />` field into an autocomplete field.
+
+### Code
+
+```html
+<label for="colors">Choose a color:</label>
+
+<input type="text" list="colorList" id="colors" name="colors" placeholder="Select a color..." />
+
+<datalist id="colorList">
+  <option value="Green" />
+  <option value="Red" />
+  <option value="Blue" />
+  <option value="Orange" />
+  <option value="Purple" />
+</datalist>
+```
+
+<br />
+
+### Demo
+<Autocomplete />
+
+<StyledHr />
+
+# Accordions
+
+Another element I first saw with the Twitter Bootstrap framework, I realied accordions are a great way to display a lot of information on a page without creating walls of boring text. We can now do the same thing with the `<section />` element.
+
+### Code
+
+```html
+<section>
+  <details open>
+    <summary>First Section</summary>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </details>
+
+  <details>
+    <summary>Second Section</summary>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </details>
+</section>
+```
+
+<br />
+
+### Demo
+
+<Accordion />
+
+<StyledHr />
+
+# Date Pickers
+
+When I was learning HTML, I only knew about a few of different input types, like **text** and **radio**. Now there's A BUNCH of others, like `date`, `color`, `number` and `email`. Give them a try!
+
+### Code
+
+```html
+<label for="date">Select a date:</label>
+<input type="date" name="date" for="date" id="date" />
+```
+
+<br />
+
+### Demo
+
+<Datepicker />
+
+<StyledHr />
+
+# Text Highlights and Edits
+
+With all the interactivity we have on the web today, tt's crazy to think that HTML was originally created to just create and view documents. Sometimes you have to take it back to the basics and show a document. But what happens if you want to show updates? `<mark />`, `<ins />` and `<del />` to the rescue.
+
+### Code
+
+```html
+<p>
+  Ut enim <mark>ad minim veniam</mark>, eu fugiat <ins>nulla</ins> <del>pariatur</del>.
+</p>
+```
+
+<br />
+
+### Demo
+
+<Edits />
