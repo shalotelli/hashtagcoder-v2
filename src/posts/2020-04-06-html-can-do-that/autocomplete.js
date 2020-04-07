@@ -2,7 +2,7 @@ import React from 'react'
 
 const Autocomplete = () => (
   <div>
-    <label for="colors" className="block text-gray-700 text-sm font-bold mb-2">
+    <label htmlFor="colors" className="block text-gray-700 text-sm font-bold mb-2">
       Choose a color:
     </label>
 

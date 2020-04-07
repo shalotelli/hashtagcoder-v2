@@ -17,7 +17,7 @@ export const dataQuery = graphql`
   appConfig {
     recentVideos
   }
-  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
+  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
     edges {
       node {
         frontmatter {

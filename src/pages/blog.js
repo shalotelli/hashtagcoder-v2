@@ -7,7 +7,7 @@ import Post from '../components/post'
 
 export const dataQuery = graphql`
 {
-  allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
+  allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
     edges {
       node {
         frontmatter {
