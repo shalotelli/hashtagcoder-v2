@@ -4,7 +4,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import MentorshipCard from '../components/mentorship-card'
 import BookMentorshipHero from '../components/book-mentorship-hero'
+import StyledHr from '../components/styled-hr'
+import TestimonaialCard from '../components/testimonial-card'
 
+// reason images
 import HeroImg from '../images/austin-distel-wD1LRb9OeEo-unsplash.jpg'
 import ResumeImg from '../images/bram-naus-n8Qb1ZAkK88-unsplash.jpg'
 import CareerImg from '../images/saulo-mohana-wNz7_5EvUWU-unsplash.jpg'
@@ -14,6 +17,9 @@ import GoalsImg from '../images/isaac-smith-8XlMU62ii8I-unsplash.jpg'
 import PerspectiveImg from '../images/anika-huizinga-RmzR87vTiYw-unsplash.jpg'
 import CommunicationImg from '../images/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.jpg'
 import SkillsImg from '../images/kelly-sikkema-N3o-leQyFsI-unsplash.jpg'
+
+// testimonial images
+import RafaelImas from '../images/testimonials/rafael-imas.jpeg'
 
 const MentorshipPage = () => (
     <Layout>
@@ -72,6 +78,16 @@ const MentorshipPage = () => (
             title="Advancing your career and talking through skill development" 
             image={SkillsImg} />
         </div>
+
+        <BookMentorshipHero />
+
+        <StyledHr title="Testimonials" />
+
+        <TestimonaialCard name="Rafael Imas" profilePic={RafaelImas} link="https://www.linkedin.com/in/rafaimas/">
+          <p class="mt-2 text-gray-800">
+            I strongly encourage people to reach out to <a href="https://www.linkedin.com/in/sha-alibhai/" rel="noopener noreferrer" className="text-blue-500">Sha Alibhai</a>. I did and after 10 minutes of conversation he got me down to a T, and gave me incredibly useful insights. I am super grateful for his unselfish desire to help others.
+          </p>
+        </TestimonaialCard>
 
         <BookMentorshipHero />
       </div>
