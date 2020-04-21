@@ -6,6 +6,7 @@ import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import TagLinks from '../components/tag-links'
 import '../css/post.css'
 
 export const pageQuery = graphql`
@@ -18,6 +19,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
       }
     }
   }
@@ -44,7 +46,9 @@ export default function PostTemplate({data}) {
 
         <div className="post">
           <h1>{frontmatter.title}</h1>
-          <h5 className="text-gray-400">{frontmatter.date}, {timeToRead} min read</h5>
+          <h5 className="text-gray-400">
+            {frontmatter.date}, {timeToRead} min read, <TagLinks tags={frontmatter.tags} />
+          </h5>
 
           <MDXRenderer>{body}</MDXRenderer>
         </div>

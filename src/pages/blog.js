@@ -14,6 +14,7 @@ export const dataQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           path
           title
+          tags
         }
         excerpt
         timeToRead

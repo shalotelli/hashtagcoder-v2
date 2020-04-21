@@ -30,7 +30,7 @@
   @apply list-none;
 }
 
-.post a {
+.post a:not(.tag-link) {
   @apply underline text-blue-400;
 }
 

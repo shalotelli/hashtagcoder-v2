@@ -12,6 +12,7 @@ exports.createPages = async ({actions, graphql, reporter}) => {
   
   const postTemplate = path.resolve('src/templates/post.js')
   const courseTemplate = path.resolve('src/templates/course.js')
+  const tagTemplate = path.resolve('src/templates/tags.js')
 
   const result = await graphql(`
     {
@@ -23,8 +24,14 @@ exports.createPages = async ({actions, graphql, reporter}) => {
           node {
             frontmatter {
               path
+              tags
             }
           }
+        }
+      }
+      tagsGroup: allMdx(limit: 1000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -44,6 +51,16 @@ exports.createPages = async ({actions, graphql, reporter}) => {
       path: node.frontmatter.path,
       component: template,
       context: {} // pass additional data here
+    })
+  })
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${tag.fieldValue.replace(/ /g, '-')}/`,
+      component: tagTemplate,
+      context: {tag: tag.fieldValue}
     })
   })
 }

@@ -2,6 +2,7 @@
 path: '/blog/the-5-most-important-things-to-look-for-in-your-next-job'
 date: '2019-10-29'
 title: 'The 5 most important things to look for in your next job'
+tags: ['career', 'mentorship']
 ---
 
 _Tl;dr at the bottom of the post._

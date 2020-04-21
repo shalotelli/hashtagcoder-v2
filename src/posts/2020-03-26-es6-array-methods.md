@@ -2,6 +2,7 @@
 path: '/blog/es6-array-methods'
 date: '2020-03-26'
 title: 'Every ES6 Array method you must know to be a JavaScript Expert'
+tags: ['javascript', 'code']
 ---
 
 Arrays are ordered list-like objects with basic methods that allow us to perform traversals and mutations. Before ES6, libraries like jQuery, MooTools and Underscore were created to extend and add additional methods that allowed us to clone arrays, search and find elements within arrays etc. With the ES6+ releases, a lot of this functionality has been added natively. 

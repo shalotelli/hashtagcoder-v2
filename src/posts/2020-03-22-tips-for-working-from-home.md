@@ -2,6 +2,7 @@
 path: "/blog/10-tips-for-working-from-home"
 date: "2020-03-22"
 title: "10 Tips for working from home that actually work"
+tags: ['career', 'mentorship']
 ---
 
 Working from home, or working "remotely" has been a trend that's been becoming more popular on for a while. For employees its an opportunity to avoid a stressful commute and get some valuable heads down time. For employers it's a chance to define some culture by showing trust, it can save money on office space and can help you create processes that let you open up your recruiting pool to more than just your immediate area. But with the current climate we find ourselves in, working from home has suddenly gone from a benefit to a necessity.
