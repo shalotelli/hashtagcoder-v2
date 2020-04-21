@@ -57,9 +57,9 @@ const AppConfig = {
   ],
 
   recentVideos: [
+    'J-3KB5InCmA',
     'oUFhebsvMq0',
-    'muifF38y4K8',
-    'pTK_JIfLD64'
+    'muifF38y4K8'
   ]
 }
 
