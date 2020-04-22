@@ -56,25 +56,26 @@ const RelatedPost = ({post}) => {
   return (
     <>
       <StyledHr title="Related Post" />
+
       <Link to={relevantPost.frontmatter.path}>
-        <div className="px-10 my-4 py-6 bg-white rounded-lg shadow-md">
-          <div className="flex justify-between items-center">
-            <span className="font-light text-gray-600">{relevantPost.frontmatter.date}, {relevantPost.timeToRead} min read</span>
+        <div className="px-10 py-6 bg-gray-100 rounded-lg shadow-md mx-2 sm:mx-0">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+            <span className="font-light text-gray-600 text-sm">{relevantPost.frontmatter.date}, {relevantPost.timeToRead} min read</span>
 
             <div>
               {relevantPost.frontmatter.tags.map(tag => (
-                <span className="px-2 py-1 m-1 bg-gray-600 text-gray-100 font-bold rounded text-sm">{tag}</span>
+                <span className="px-2 py-1 mr-2 bg-blue-600 text-gray-100 font-bold rounded text-xs">{tag}</span>
               ))}
             </div>
           </div>
           
           <div className="mt-2">
-            <h3 className="text-2xl text-gray-700 font-bold hover:text-gray-600">{relevantPost.frontmatter.title}</h3>
-            <p className="mt-2 text-gray-600">{relevantPost.excerpt}</p>
+            <h4 className="text-gray-700 font-bold hover:text-gray-600">{relevantPost.frontmatter.title}</h4>
+            <p className="mt-2 text-gray-600 text-sm">{relevantPost.excerpt}</p>
           </div>
 
           <div className="flex justify-between items-center mt-4">
-            <span className="text-blue-600 hover:underline">Read more</span>
+            <span className="text-blue-600 hover:underline text-sm">Read more</span>
           </div>
         </div>
       </Link>
