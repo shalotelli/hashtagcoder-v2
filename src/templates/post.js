@@ -7,6 +7,8 @@ import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TagLinks from '../components/tag-links'
+import RelatedPost from '../components/related-post'
+
 import '../css/post.css'
 
 export const pageQuery = graphql`
@@ -26,16 +28,16 @@ export const pageQuery = graphql`
 `
 
 export default function PostTemplate({data}) {
-  const {mdx} = data
-  const {frontmatter, body, excerpt, timeToRead} = mdx
+  const {mdx: post} = data
+  const {frontmatter, body, excerpt, timeToRead} = post
 
   return (
     <Layout>
       <SEO title={frontmatter.title} description={excerpt} />
 
       <div className="my-24 sm:my-32">
-        <nav class="text-sm my-3 hidden sm:block" aria-label="Breadcrumb">
-          <ul class="list-none p-0 inline-flex">
+        <nav className="text-sm my-3 hidden sm:block" aria-label="Breadcrumb">
+          <ul className="list-none p-0 inline-flex">
             <li>
               <Link to="/blog" className="underline text-blue-400 hover:text-blue-600">Blog</Link>
               <FontAwesomeIcon icon={faCaretRight} className="mx-3" />
@@ -52,6 +54,8 @@ export default function PostTemplate({data}) {
 
           <MDXRenderer>{body}</MDXRenderer>
         </div>
+
+        <RelatedPost post={post} />
       </div>
     </Layout>
   )

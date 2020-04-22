@@ -44,8 +44,8 @@ const Tags = ({pageContext, data}) => {
       <div className="my-24 sm:my-32">
         <h1>{tagHeader}</h1>
 
-        <nav class="text-lg my-3 hidden sm:block" aria-label="Breadcrumb">
-          <ul class="list-none p-0 inline-flex">
+        <nav className="text-lg my-3 hidden sm:block" aria-label="Breadcrumb">
+          <ul className="list-none p-0 inline-flex">
             <li>
               <Link to="/tags" className="underline text-blue-400 hover:text-blue-600">All tags</Link>
               <FontAwesomeIcon icon={faCaretRight} className="mx-3" />
