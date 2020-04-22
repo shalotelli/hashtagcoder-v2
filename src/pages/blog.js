@@ -15,6 +15,18 @@ export const dataQuery = graphql`
           path
           title
           tags
+          cover {
+            publicURL
+            childImageSharp {
+              fluid(maxWidth: 1064, quality: 100) {
+                src
+                srcSet
+                sizes
+                aspectRatio
+                base64
+              }
+            }
+          }
         }
         excerpt
         timeToRead
@@ -28,8 +40,10 @@ const BlogPage = ({data}) => (
   <Layout>
     <SEO title="Blog" />
 
-    <div className="my-24 sm:my-32">
-      {data.allMdx.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
+    <div className="my-16 sm:my-32">
+      <div className="flex flex-wrap justify-center">
+        {data.allMdx.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
+      </div>
     </div>
   </Layout>
 )

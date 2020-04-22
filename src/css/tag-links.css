@@ -1,7 +1,7 @@
 .tag-link {
-  @apply no-underline text-blue-300;
+  @apply no-underline text-white bg-blue-500 px-2 py-1 mx-1 rounded-md;
 }
 
 .tag-link:hover, .tag-link:active {
-  @apply text-blue-600;
+  @apply bg-blue-800;
 }

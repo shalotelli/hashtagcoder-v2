@@ -17,7 +17,7 @@ export const dataQuery = graphql`
   appConfig {
     recentVideos
   }
-  allMdx(limit: 5, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
+  allMdx(limit: 4, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
     edges {
       node {
         frontmatter {
@@ -25,6 +25,18 @@ export const dataQuery = graphql`
           path
           title
           tags
+          cover {
+            publicURL
+            childImageSharp {
+              fluid(maxWidth: 1064, quality: 100) {
+                src
+                srcSet
+                sizes
+                aspectRatio
+                base64
+              }
+            }
+          }
         }
         excerpt
         timeToRead
@@ -89,7 +101,7 @@ const IndexPage = ({data}) => {
 
       <StyledHr title="Recent Blog Posts" />
 
-      <div className="mb-10 px-5 sm:px-0">
+      <div className="mb-10 px-5 sm:px-0 flex flex-wrap justify-center">
         {recentBlogPosts.map(({node: post}, i) => <Post data={post} key={i} />)}
       </div>
 

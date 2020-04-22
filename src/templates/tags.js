@@ -23,6 +23,18 @@ export const pageQuery = graphql`
             path
             title
             tags
+            cover {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1064, quality: 100) {
+                  src
+                  srcSet
+                  sizes
+                  aspectRatio
+                  base64
+                }
+              }
+            }
           }
           excerpt
           timeToRead
@@ -54,7 +66,7 @@ const Tags = ({pageContext, data}) => {
           </ul>
         </nav>
 
-        <div className="mt-10 px-5 sm:px-0">
+        <div className="mt-10 sm:px-0 flex flex-wrap justify-center">
           {edges.map(({node: post}, i) => <Post data={post} key={i} />)}
         </div>
       </div>

@@ -3,6 +3,7 @@ path: '/blog/20-examples-of-ambitious-and-achievable-smart-goals'
 date: '2019-11-10'
 title: '20 examples of ambitious and achievable SMART goals'
 tags: ['career', 'mentorship']
+cover: ../images/cover/estee-janssens-zEqkUMiMxMI-unsplash.jpg
 ---
 
 Defining SMART goals is one of the most important steps to success. You need to figure out where you're going so that you can make a plan of how you're going to get there. But if you don't set the right goals, you risk losing focus on what you're trying to achieve.

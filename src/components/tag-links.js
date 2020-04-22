@@ -11,7 +11,6 @@ const TagLinks = ({tags}) => (
         <Link className="tag-link" to={`/tags/${tag.replace(/ /g, '-')}`}>
           {tag}
         </Link>
-        {(i < tags.length - 1) ? ', ' : ''}
       </span>
     ))}
   </>

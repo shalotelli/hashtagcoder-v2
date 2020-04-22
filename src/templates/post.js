@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
+import Img from 'gatsby-image'
 import {MDXRenderer} from 'gatsby-plugin-mdx'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
@@ -22,6 +23,18 @@ export const pageQuery = graphql`
         path
         title
         tags
+        cover {
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 1064, quality: 100) {
+              src
+              srcSet
+              sizes
+              aspectRatio
+              base64
+            }
+          }
+        }
       }
     }
   }
@@ -35,8 +48,15 @@ export default function PostTemplate({data}) {
     <Layout>
       <SEO title={frontmatter.title} description={excerpt} />
 
-      <div className="my-24 sm:my-32">
-        <nav className="text-sm my-3 hidden sm:block" aria-label="Breadcrumb">
+      <div className="my-16 sm:my-32">
+        {!!frontmatter.cover ? 
+          <Img 
+            fluid={frontmatter.cover.childImageSharp.fluid} 
+            className="object-cover object-center rounded-lg h-64" /> : 
+          null
+        }
+
+        <nav className="text-sm my-3 hidden sm:block bg-gray-100 p-3 rounded-lg" aria-label="Breadcrumb">
           <ul className="list-none p-0 inline-flex">
             <li>
               <Link to="/blog" className="underline text-blue-400 hover:text-blue-600">Blog</Link>
