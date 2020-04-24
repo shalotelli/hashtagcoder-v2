@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@5"></script><script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.6.1/dist/view.min.js"></script>
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script>markmap.markmap('svg#mindmap',{"t":"heading","d":1,"v":"Senior Software Engineer","c":[{"t":"heading","d":2,"v":"Project","c":[{"t":"list_item","d":3,"v":"Execution"},{"t":"list_item","d":3,"v":"Architecture"},{"t":"list_item","d":3,"v":"Expertise"},{"t":"list_item","d":3,"v":"Ownership"},{"t":"list_item","d":3,"v":"Reviews"}]},{"t":"heading","d":2,"v":"People","c":[{"t":"list_item","d":3,"v":"Mentorship"},{"t":"list_item","d":3,"v":"Pair programming"},{"t":"list_item","d":3,"v":"Experience"},{"t":"list_item","d":3,"v":"Onboarding"},{"t":"list_item","d":3,"v":"Communication"}]},{"t":"heading","d":2,"v":"Process","c":[{"t":"list_item","d":3,"v":"Management"},{"t":"list_item","d":3,"v":"Standard setting"}]}]}).fit()</script>
+</body>
+</html>
