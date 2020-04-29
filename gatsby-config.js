@@ -67,6 +67,14 @@ module.exports = {
         extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              maintainCase: true,
+              isIconAfterHeader: true,
+              className: 'hash-anchor'
+            }
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               inlineCodeMarker: '›',

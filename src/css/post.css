@@ -37,3 +37,19 @@
 .post a:not(.tag-link):hover, .post a:not(.tag-link):active {
   @apply text-blue-600;
 }
+
+.post h1, .post h2, .post h3, .post h4, .post h5 {
+  @apply flex items-center;
+}
+
+.post h1, .post h2, .post h3, .post h4, .post h5 {
+  @apply flex items-center;
+}
+
+.post h1:hover .hash-anchor, .post h2:hover .hash-anchor, .post h3:hover .hash-anchor, .post h4:hover .hash-anchor, .post h5:hover .hash-anchor {
+  @apply block;
+}
+
+.hash-anchor {
+  @apply ml-1 hidden;
+}
