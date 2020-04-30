@@ -9,11 +9,17 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TagLinks from '../components/tag-links'
 import RelatedPost from '../components/related-post'
+import ShareButtons from '../components/share-buttons'
 
 import '../css/post.css'
 
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     mdx(frontmatter: {path: {eq: $path}}) {
       body
       excerpt
@@ -41,7 +47,7 @@ export const pageQuery = graphql`
 `
 
 export default function PostTemplate({data}) {
-  const {mdx: post} = data
+  const {mdx: post, site} = data
   const {frontmatter, body, excerpt, timeToRead} = post
 
   return (
@@ -68,11 +74,25 @@ export default function PostTemplate({data}) {
 
         <div className="post">
           <h1>{frontmatter.title}</h1>
-          <p className="text-gray-400 mb-5 text-sm sm:text-base">
+          <p className="text-gray-400 mb-3 text-sm sm:text-base">
             {frontmatter.date}, {timeToRead} min read, <TagLinks tags={frontmatter.tags} />
           </p>
 
+          <div className="mb-3">
+            <ShareButtons 
+              url={site.siteMetadata.siteUrl + frontmatter.path} 
+              title={frontmatter.title} 
+              tags={frontmatter.tags} />
+          </div>
+
           <MDXRenderer>{body}</MDXRenderer>
+
+          <div className="my-3 w-screen">
+            <ShareButtons 
+              url={site.siteMetadata.siteUrl + frontmatter.path} 
+              title={frontmatter.title} 
+              tags={frontmatter.tags} />
+          </div>
         </div>
 
         <RelatedPost post={post} />
