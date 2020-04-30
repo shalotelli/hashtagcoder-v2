@@ -68,9 +68,9 @@ export default function PostTemplate({data}) {
 
         <div className="post">
           <h1>{frontmatter.title}</h1>
-          <h5 className="text-gray-400 mb-3">
+          <p className="text-gray-400 mb-5 text-sm sm:text-base">
             {frontmatter.date}, {timeToRead} min read, <TagLinks tags={frontmatter.tags} />
-          </h5>
+          </p>
 
           <MDXRenderer>{body}</MDXRenderer>
         </div>

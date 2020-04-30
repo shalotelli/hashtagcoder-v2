@@ -63,8 +63,11 @@ const RelatedPost = ({post}) => {
             <span className="font-light text-gray-600 text-sm">{relevantPost.frontmatter.date}, {relevantPost.timeToRead} min read</span>
 
             <div>
-              {relevantPost.frontmatter.tags.map(tag => (
-                <span className="px-2 py-1 mr-2 bg-blue-600 text-gray-100 font-bold rounded text-xs">{tag}</span>
+              {relevantPost.frontmatter.tags.map((tag, i) => (
+                <span key={i}
+                  className="px-2 py-1 mr-2 bg-blue-600 text-gray-100 font-bold rounded text-xs">
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
