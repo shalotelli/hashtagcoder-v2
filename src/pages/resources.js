@@ -8,7 +8,7 @@ import WebpackCoverImg from '../images/webpack2-cover.png'
 
 const ResourcesPage = () => (
   <Layout>
-    <SEO title="Resources" />
+    <SEO title="Resources to help you learn and land your dream job" />
 
     <div className="my-24 sm:my-32">
       <h1>Create a life you love through technology.</h1>

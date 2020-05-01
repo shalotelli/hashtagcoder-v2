@@ -27,7 +27,7 @@ const CoursesPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Courses" />
+      <SEO title="Technical tutorials and development videos predominantly focusing on JavaScript and Web Components." />
 
       <div className="my-24 sm:my-32">
         <h1>Programmer <small><em>(noun)</em></small></h1>

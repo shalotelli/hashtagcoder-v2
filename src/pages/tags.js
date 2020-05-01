@@ -17,7 +17,7 @@ query {
 
 const TagsPage = ({data}) => (
   <Layout>
-    <SEO title="Tags" />
+    <SEO title="Blog post tags" />
 
     <div className="my-24 sm:my-32">
       <h1>Tags</h1>

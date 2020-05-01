@@ -23,7 +23,7 @@ import RafaelImas from '../images/testimonials/rafael-imas.jpeg'
 
 const MentorshipPage = () => (
     <Layout>
-      <SEO title="Mentorship" />
+      <SEO title="Spend 30 minutes with me talking through career growth, goals, or code.Mentorship" />
 
       <div className="my-24 sm:my-32">
         <h1>1-1 Live Mentorship Sessions</h1>

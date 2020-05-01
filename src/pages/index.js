@@ -52,7 +52,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Technical tutorials, development and career advice predominantly focusing on JavaScript." />
       
       <div className="h-screen flex items-center">
         <h1 className="flex text-4xl sm:text-5xl sm:ml-10">

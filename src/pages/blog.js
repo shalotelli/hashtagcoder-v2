@@ -38,7 +38,7 @@ export const dataQuery = graphql`
 
 const BlogPage = ({data}) => (
   <Layout>
-    <SEO title="Blog" />
+    <SEO title="Technical tutorials, development and career advice predominantly focusing on JavaScript." />
 
     <div className="my-16 sm:my-32">
       <div className="flex flex-wrap justify-center">
