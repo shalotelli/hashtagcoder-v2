@@ -53,3 +53,11 @@
 .hash-anchor {
   @apply ml-1 hidden;
 }
+
+blockquote {
+  @apply border-l-4 pl-3 m-4 border-gray-200 text-lg text-gray-600 italic;
+}
+
+blockquote + p > em {
+  @apply pl-8 text-gray-700;
+}
