@@ -61,3 +61,12 @@ blockquote {
 blockquote + p > em {
   @apply pl-8 text-gray-700;
 }
+
+.post table {
+  @apply text-xs;
+}
+
+.post td, .post th {
+  @apply border p-2;
+  text-align: left;
+}
