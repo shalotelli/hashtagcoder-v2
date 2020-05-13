@@ -26,6 +26,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        updatedOn(formatString: "MMMM DD, YYYY")
         path
         title
         tags
@@ -75,7 +76,9 @@ export default function PostTemplate({data}) {
         <div className="post">
           <h1>{frontmatter.title}</h1>
           <p className="text-gray-400 mb-3 text-sm sm:text-base">
-            {frontmatter.date}, {timeToRead} min read, <TagLinks tags={frontmatter.tags} />
+            Published {frontmatter.date}, {timeToRead} min read, <TagLinks tags={frontmatter.tags} />
+
+            {frontmatter.updatedOn && <div>Updated on {frontmatter.updatedOn}</div>}
           </p>
 
           <div className="mb-3">

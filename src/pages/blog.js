@@ -12,6 +12,7 @@ export const dataQuery = graphql`
       node {
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
+          updatedOn(formatString: "MMMM DD, YYYY")
           path
           title
           tags
