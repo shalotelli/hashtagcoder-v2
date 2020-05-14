@@ -26,6 +26,13 @@ const AppConfig = {
       page: 'resources',
       value: 'Resources',
       active: true
+    },
+
+    {
+      href: 'thoughts',
+      page: 'thoughts',
+      value: 'Thoughts',
+      active: true
     }
   ],
 

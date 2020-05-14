@@ -1,0 +1,21 @@
+.thoughts-list li {
+  @apply mx-4 my-12 list-decimal;
+}
+
+.thoughts-list li a { 
+  @apply text-blue-500 text-xl underline;
+}
+
+.thoughts-list li a:hover { 
+  @apply text-blue-800;
+}
+
+.thoughts-list li p {
+  @apply text-gray-500 text-sm;
+}
+
+@screen sm {
+  .thoughts-list li {
+    @apply mx-0;
+  }
+}
