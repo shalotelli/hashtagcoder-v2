@@ -8,6 +8,7 @@ import SEO from '../components/seo'
 import StyledHr from '../components/styled-hr'
 import Post from '../components/post'
 import YouTube from '../components/youtube'
+import RandomThought from '../components/random-thought'
 
 import '../css/index.css'
 import MeImg from '../images/me.jpg'
@@ -16,6 +17,11 @@ export const dataQuery = graphql`
 {
   appConfig {
     recentVideos
+    thoughts {
+      title
+      url
+      description
+    }
   }
   allMdx(limit: 4, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
     edges {
@@ -49,6 +55,7 @@ export const dataQuery = graphql`
 const IndexPage = ({data}) => {
   const recentBlogPosts = data.allMdx.edges
   const recentVideos = data.appConfig.recentVideos
+  const thoughts = data.appConfig.thoughts
 
   return (
     <Layout>
@@ -58,11 +65,15 @@ const IndexPage = ({data}) => {
         <h1 className="flex text-4xl sm:text-5xl sm:ml-10">
           <span role="img" aria-label="wave" className="animated tada delay-1s">👋</span>
           &nbsp;
-          <div>Hi, I'm Sha.</div>
+          <div>
+            Hi, I'm Sha.
+            <RandomThought thought={thoughts[Math.floor(Math.random() * thoughts.length)]} />
+          </div>
         </h1>
       </div>
 
-      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-5xl sm:text-6xl text-gray-300 z-10 animated bounce">
+      <div className="absolute bottom-0 left-0 flex flex-col justify-center items-center w-screen text-5xl sm:text-6xl text-gray-300 z-10 animated bounce">
+        <div className="text-lg">Scroll for more</div>
         <FontAwesomeIcon icon={faArrowDown} />
       </div>
 
