@@ -1,7 +1,5 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faArrowDown} from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -72,9 +70,8 @@ const IndexPage = ({data}) => {
         </h1>
       </div>
 
-      <div className="absolute bottom-0 left-0 flex flex-col justify-center items-center w-screen text-5xl sm:text-6xl text-gray-300 z-10 animated bounce">
-        <div className="text-lg">Scroll for more</div>
-        <FontAwesomeIcon icon={faArrowDown} />
+      <div className="absolute bottom-0 left-0 flex justify-center w-screen text-lg text-gray-300 z-10 animated bounce">
+        Scroll for more
       </div>
 
       <div className="flex flex-col sm:flex-row justify-center items-center">
