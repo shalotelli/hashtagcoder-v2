@@ -20,6 +20,8 @@ import SkillsImg from '../images/kelly-sikkema-N3o-leQyFsI-unsplash.jpg'
 
 // testimonial images
 import RafaelImas from '../images/testimonials/rafael-imas.jpeg'
+import ReyJoako from '../images/testimonials/rey-joako.jpg'
+import Anonymous from '../images/testimonials/anonymous.jpg'
 
 const MentorshipPage = () => (
     <Layout>
@@ -83,9 +85,38 @@ const MentorshipPage = () => (
 
         <StyledHr title="Testimonials" />
 
-        <TestimonaialCard name="Rafael Imas" profilePic={RafaelImas} link="https://www.linkedin.com/in/rafaimas/">
+        <TestimonaialCard 
+          name="Rafael Imas" 
+          profilePic={RafaelImas} 
+          link="https://www.linkedin.com/in/rafaimas/">
           <p class="mt-2 text-gray-800">
             I strongly encourage people to reach out to <a href="https://www.linkedin.com/in/sha-alibhai/" rel="noopener noreferrer" className="text-blue-500">Sha Alibhai</a>. I did and after 10 minutes of conversation he got me down to a T, and gave me incredibly useful insights. I am super grateful for his unselfish desire to help others.
+          </p>
+        </TestimonaialCard>
+
+        <TestimonaialCard 
+          name="Anon" 
+          profilePic={Anonymous} 
+          link="https://twitter.com/joako_reyes/status/1262493182757163009">
+          <p class="mt-2 text-gray-800">
+            Regarding choosing the management path, your input related what a manager/director does on a practical basis gave me a good perspective. Most of the people talk things in abstract - like managers do leadership/one on ones/team direction setting etc. but you talked more practical things which you do on day today basis which provided more clarity.
+          </p>
+          
+          <p class="mt-2 text-gray-800">
+            Also you kind of challenged me on about my coding background which helped me to introspect how much ready I am if I decide to go to coding career path. I am now trying to  do some coding on a daily basis for practice.
+          </p>
+
+          <p class="mt-2 text-gray-800">
+            Regarding the resume question, you mentioned about that during job interviews it really boils down to what I have done rather than which role I am currently in. This gave me a good perspective.
+          </p>
+        </TestimonaialCard>
+
+        <TestimonaialCard 
+          name="Rey Joako" 
+          profilePic={ReyJoako} 
+          link="https://twitter.com/joako_reyes/status/1262493182757163009">
+          <p class="mt-2 text-gray-800">
+            Just had a 1-1 session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> and it was absolutely great. Serioulsy people of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hashtag_click" rel="noopener noreferrer" className="text-blue-500">#100DaysOfCode</a> you don't know how helpful it is to have someone experienced point you in the right direction. This guy does it for free! Thanks mate, I really appreciate it.
           </p>
         </TestimonaialCard>
 

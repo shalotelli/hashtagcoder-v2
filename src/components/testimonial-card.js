@@ -1,8 +1,8 @@
 import React from 'react'
 
-const TestimonialCard = ({profilePic, children, name, link}) => (
+const TestimonialCard = ({profilePic, profilePicAlign = 'end', children, name, link}) => (
   <div className="py-4 px-8 bg-white shadow-md rounded-lg my-20">
-    <div class="flex justify-center md:justify-end -mt-16">
+    <div class={`flex justify-center md:justify-${profilePicAlign} -mt-16`}>
       <img class="w-20 h-20 object-cover rounded-full" src={profilePic} alt={name} />
     </div>
 
