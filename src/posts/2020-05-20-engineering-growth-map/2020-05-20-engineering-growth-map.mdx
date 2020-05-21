@@ -1,0 +1,85 @@
+---
+path: '/blog/engineering-growth-map'
+date: '2020-05-20'
+title: 'Creating an Engineering Growth Map'
+tags: ['career', 'mentorship']
+cover: ../images/cover/austin-distel-4r72LPFh4Ik-unsplash.jpg
+---
+
+import GrowthMapBlock from './growth-map-block.js'
+
+Becoming a great engineer doesn't happen by chance. Aside from continuing to develop technical skills, it takes support, focus and direction. As I've discussed previously about [being an effective contributor](https://www.hashtagcoder.dev/blog/senior-software-engineer/) and [being a great leader](https://www.hashtagcoder.dev/blog/director-of-engineering/), having clear growth opportunities is an extremely important piece of a [healthy engineering culture](https://www.hashtagcoder.dev/blog/engineering-culture). 
+
+One thing that's become very apparent to me over the years is that engineers value learning new things over other almost any other motivator. That's why I always focus on [the people and the problem](https://www.hashtagcoder.dev/blog/people-problem-pay/) when I'm helping others with their careers. But this comes with balance. To learn more, we have to get more insights and to get more insights we have to work their way up the organizational chart. However as we go up that org chart, our responsibilities naturally become more about mentorship and focus on others contributions. For this reason, it's important for leaders to create a structure that nurtures continued learning at every level.
+
+If you want to build something great, it starts with great people. The responsibility of every organization is to cultivate an environment where engineers can challenge themselves and each other, can achieve their personal and professional goals and are set up for success. To embody these principles on my team, we've developed a set of norms, frameworks and processes to support the engineers as they grow their careers and take on more responsibility. These guiding principals pave the path for professional growth regardless of personal aspiration. They create a clear and mutual contract between leaders and contributors to align goals and purpose with the organization's mission.
+
+# Guiding Principles
+
+**Multi-track Progression**
+
+Engineers and Engineering Managers are on distinct paths. Some engineers have core competencies that are suited more to project management and architecture. Others are more suited to people management. Making this explicit ensures engineers can grow their career and take on more responsibility without feeling like they have to become managers and stop doing the things they love. Although there are overlaps, the skills and motivations necessary to be successful in these different roles are totally different.
+
+**Right Person, Right Seat**
+
+I don't promote the hardest worker or the engineer that's been on the team the longest. The biggest mistake that I see leaders make is measuring individuals by output alone. Instead, I promote the engineer that demonstrates they get, want and can do whats expected from them at the next level. I believe in the concept of doing and asking for forgiveness, instead of asking for permission. Once I see someone taking on or being able to handle additional responsibility, this is formalized with a promotion.
+
+An example of this is a mid-level contributor that starts thinking outside of their own contributions. Instead of thinking "I need to meet my sprint goals", they start taking ownership of their teams commitment and change their mentality to, "I need to help the team meet their sprint goals". This change in attitude is demonstrated through initiatives like clear and transparent communication, pair programming and constantly asking the right questions to get a pulse on progress. This mindset shows clear understanding of leadership and this responsibility is formalized so that the engineer feels empowered and values their voice.
+
+# An Example Engineering Team Growth Map
+
+The best way to pave this golden path is by explicitly setting out expectations on both sides. 
+
+**For leaders** - A well defined growth map should be used in mentorship opportunities to focus on growth and potential. Use it to make sure you're putting the right people in the right seats so you ensure you're setting them up for success.
+
+**For engineers** - This should be a reference point to understand how others have been successful and to help you set your own goals based on what you want to achieve in your own career. Reference these points during 1-1 conversations and measure your own success to how well you're tracking towards the stated expectations not only for your current role, but for subsequent ones that take you on the path you want to follow.
+
+<a href="/engineering-team-growth-map.pdf">You can download the growth map below as PDF here.</a>
+
+<GrowthMapBlock
+  level="1"
+  title="Associate Engineer"
+  description="<p>The primary responsibility of an engineer at this level is learning and developing competence.</p><p>A lot of time will be spent getting familiar with tools, languages and best practices.</p><p>Engineer may be asked to aid in quality assurance testing, writing automated test scripts and unit tests.</p>"
+  focus="<p>Develop a basic understanding of the languages and tools used by the team.</p><p>Get exposure to team practices such as writing unit tests, debugging, creating and reviewing pull requests, writing  documentation etc.</p><p>Learn good communication skills between teammates.</p><p>Work under supervision to perform assigned tasks.</p>"
+  skills={['JavaScript', 'HTML', 'CSS', 'GIT/Github (optional)', 'Ruby on Rails (optional)']}
+ />
+
+<GrowthMapBlock
+  level="2"
+  title="Software Engineer"
+  description="<p>The engineer has demonstrated competencies in completing a task from understanding to guiding it through testing.</p><p>The primary responsibility of a software engineer is to apply their skills without supervision and practice becoming an “expert” in at least one area.</p>"
+  focus="<p>Leverage skills and best practices to write and continually improve code base.</p><p>Develop mastery in the tools, languages and frameworks used by the team.</p><p>Practice skills by mentoring less experienced team mates.</p><p>Demonstrate some evaluation, originality and ingenuity skills.</p>"
+  skills={['All Associate Engineer Requirements (optional requirements become mandatory)']}
+ />
+
+<GrowthMapBlock 
+  level="3"
+  title="Senior Software Engineer"
+  description="<p>An engineer at this level is expected to be able to accomplish a task end to end in an optimal and efficient manner.</p><p>They demonstrate and build upon the skills they have learnt in previous positions and have become a trustworthy member of the team.</p>"
+  focus="<p>Demonstrate ability to think outside of a problem by not just meeting requirements but also understanding the “why” and solving the business need. This could mean working through a better/easier/more robust solution that exceeds the initial requirements.</p><p>Become a stable and trustworthy resource for the team by demonstrating comprehensive understanding of the product.</p>"
+  skills={['All Software Engineer requirements', 'Database optimization (PostgreSQL)', 'REST API Design']}
+ />
+
+<GrowthMapBlock
+  level="4"
+  title="Staff Software Engineer"
+  description="<p>A Staff Software Engineer is a master of the tools and techniques used and is now able to improve and recommend processes.</p><p>They have accomplished the technical maturity that allows them to solve complex problems and have begun to take an ownership position on the code and systems developed by the rest of the team.</p><p>The most important responsibility at this level is to guide and mentor others and help them to develop their skills.</p>"
+  focus="<p>Develop best practices and process for the team to work with.</p><p>Evaluate, design and architect new projects and features.</p><p>Help evaluate and select best tools, languages and frameworks used by the team.</p><p>Onboard and mentor new members of the team and guide them to success.</p><p>Begin to take ownership of code and systems developed by other members of the team.</p>"
+  skills={['All Full Stack Engineer requirements', 'NodeJS', 'MicroService architecture', 'Comprehensive understanding of Agile Methodology']}
+ />
+
+<GrowthMapBlock
+  level="5"
+  title="Principal Software Engineer"
+  description="<p>The Principal Software Engineer acts a team leader of their assigned project.</p><p>They possess comprehensive knowledge of at least one field of specialization that can be applied to accomplish complex tasks.</p><p>Someone in this role acts as the glue between project managers/product owners and the engineering team, aiding in creating technical acceptance criteria.</p><p>They may occasionally be asked to report to management and give progress reports.</p>"
+  focus="<p>Architect, execute and supervise completion of tasks, as well as reviewing progress and evaluating results.</p><p>Plans and aids in assignment of tasks and projects to the right team members.</p><p>Conducts 1-1s and performance review of those reporting to them.</p><p>Interprets and applies organizational policy.</p>"
+  skills={['All Senior Software Engineering requirements']}
+ />
+
+<GrowthMapBlock
+  level="5"
+  title="Software Engineering Manager"
+  description="<p>The Software Engineering Manager oversees execution for all projects across the engineering team.</p><p>They are accountable for team health and keep a pulse of current sentiment and responsibilities across verticals.</p><p>A Software Engineering Manager understands that value of functioning beyond their own accountabilities and instead helps the team focus on outcomes by measuring individual outputs and KPIs.</p>"
+  focus="<p>Cultivate relationships and share expertise to help achieve company’s goals.</p><p>Create career growth plans and mentorship opportunities by providing constant feedback.</p><p>Conducts 1-1s and performance review of those reporting to them.</p><p>Assess and address capacity and development needs of the engineering team.</p>"
+  skills={['Demonstrated ability to lead project and others and achieve expected results with minimal guidance', 'Demonstrated repeated success in the ability to take a vision and set the direction, frame the project, provide clarity to team, and deliver results', 'Demonstrated ability to guide, develop, and grow team members through success as a Counselor or go-to']}
+ />

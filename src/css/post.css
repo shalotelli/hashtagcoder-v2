@@ -70,3 +70,11 @@ blockquote + p > em {
   @apply border p-2;
   text-align: left;
 }
+
+.post table ul {
+  @apply list-disc ml-4;
+}
+
+.post table li {
+  @apply mb-2 leading-tight;
+}
