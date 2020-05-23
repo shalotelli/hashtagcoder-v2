@@ -15,7 +15,7 @@ const RandomThought = ({thought}) => (
       target="_blank" 
       rel="noopener noreferrer"
       className="text-base sm:text-lg underline text-blue-500 hover:text-blue-800">
-      Find me on <FontAwesomeIcon icon={faTwitter} /> (@hashtagcoder) and share your thoughts with me!
+      Tweet me (@hashtagcoder) and share your thoughts!
     </a>
   </div>
 )
