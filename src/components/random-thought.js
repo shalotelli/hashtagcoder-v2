@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 
 const RandomThought = ({thought}) => (
   <div className="text-xs sm:text-base mt-4">
