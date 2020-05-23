@@ -110,6 +110,12 @@ const AppConfig = {
       title: 'Finding your dream job',
       url: '/blog/the-5-most-important-things-to-look-for-in-your-next-job/',
       description: 'Your next job isn\'t the important one. It\'s the one after that you should be focused on. These are my thoughts categorized into the 5 most important things to look for to continue pushing to your dream job.'
+    },
+
+    {
+      title: 'Supporting teams with professional growth maps',
+      url: '/blog/engineering-growth-map',
+      description: 'If you want to build something great, it starts with great people. Nurturing great contributors doesn\'t happen by chance. Aside from helping them develop core skills, it takes support, focus and direction. The best way to pave this golden path is by explicitly setting out expectations on both sides. Here\'s how I\'ve done it.'
     }
   ]
 }
