@@ -37,7 +37,7 @@ function SEO({description, lang, meta, title, image}) {
     metaImage = [
       {
         property: "og:image",
-        content: image.src,
+        content: `https://hashtagcoder.dev${image.src}`,
       },
       {
         property: "og:image:width",
@@ -49,7 +49,7 @@ function SEO({description, lang, meta, title, image}) {
       },
       {
         property: "twitter:image",
-        content: image.src,
+        content: `https://hashtagcoder.dev${image.src}`,
       },
       {
         name: "twitter:card",
