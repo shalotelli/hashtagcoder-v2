@@ -37,7 +37,7 @@ function SEO({description, lang, meta, title, image}) {
     metaImage = [
       {
         property: "og:image",
-        content: image,
+        content: image.src,
       },
       {
         property: "og:image:width",
@@ -46,6 +46,10 @@ function SEO({description, lang, meta, title, image}) {
       {
         property: "og:image:height",
         content: image.height,
+      },
+      {
+        property: "twitter:image",
+        content: image.src,
       },
       {
         name: "twitter:card",
