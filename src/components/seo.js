@@ -41,11 +41,11 @@ function SEO({description, lang, meta, title, image}) {
       },
       {
         property: "og:image:width",
-        content: 1200,
+        content: image.width,
       },
       {
         property: "og:image:height",
-        content: 630,
+        content: image.height,
       },
       {
         name: "twitter:card",

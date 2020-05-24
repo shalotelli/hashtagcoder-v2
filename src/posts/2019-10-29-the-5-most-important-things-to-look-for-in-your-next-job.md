@@ -4,6 +4,7 @@ date: '2019-10-29'
 title: 'The 5 most important things to look for in your next job'
 tags: ['career', 'mentorship']
 cover: ../images/cover/marten-bjork-6dW3xyQvcYE-unsplash.jpg
+socialCard: ../images/social-cards/the-5-most-important-things-to-look-for-in-your-next-job.jpg
 ---
 
 _Tl;dr at the bottom of the post._

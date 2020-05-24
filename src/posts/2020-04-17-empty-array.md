@@ -4,6 +4,7 @@ date: '2020-04-17'
 title: 'Quick JavaScript Tip: Emptying an array without losing reference'
 tags: ['javascript', 'code', 'quick tip']
 cover: ../images/cover/jonas-jacobsson-2xaF4TbjXT0-unsplash.jpg
+socialCard: ../images/social-cards/empty-array.jpg
 ---
 
 Quick JavaScript Tip: Overwriting an array's length property gives us an easy way to truncate and clear its content.

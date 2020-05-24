@@ -42,6 +42,15 @@ export const pageQuery = graphql`
             }
           }
         }
+        socialCard {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
@@ -50,11 +59,13 @@ export const pageQuery = graphql`
 export default function PostTemplate({data}) {
   const {mdx: post, site} = data
   const {frontmatter, body, excerpt, timeToRead} = post
-  const imagePath = `/images/${frontmatter.path.replace('/blog/', '')}.jpg`
+  const socialCard = post.frontmatter.socialCard
+      ? post.frontmatter.socialCard.childImageSharp.resize
+      : null
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} description={excerpt} image={imagePath} />
+      <SEO title={frontmatter.title} description={excerpt} image={socialCard} />
 
       <div className="my-16 sm:my-32">
         {!!frontmatter.cover ? 

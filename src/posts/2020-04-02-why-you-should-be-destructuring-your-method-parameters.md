@@ -4,6 +4,7 @@ date: '2020-04-02'
 title: 'Why you should be destructuring your method parameters in ES6'
 tags: ['javascript', 'code', 'quick tip']
 cover: ../images/cover/artem-sapegin-ZMraoOybTLQ-unsplash.jpg
+socialCard: ../images/social-cards/destructuring-method-parameters-in-es6.jpg
 ---
 
 A lot of times when we're defining methods and creating classes, we use "config objects" to group parameters in a neat way so that we don't have long, hard to maintain method calls. Config objects are also an awesome way to create optional parameters or set default values. 
