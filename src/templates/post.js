@@ -50,10 +50,11 @@ export const pageQuery = graphql`
 export default function PostTemplate({data}) {
   const {mdx: post, site} = data
   const {frontmatter, body, excerpt, timeToRead} = post
+  const imagePath = `/images/${frontmatter.path.replace('/blog/', '')}.jpg`
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} description={excerpt} />
+      <SEO title={frontmatter.title} description={excerpt} image={imagePath} />
 
       <div className="my-16 sm:my-32">
         {!!frontmatter.cover ? 
