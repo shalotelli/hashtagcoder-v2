@@ -21,6 +21,7 @@ import SkillsImg from '../images/kelly-sikkema-N3o-leQyFsI-unsplash.jpg'
 // testimonial images
 import RafaelImas from '../images/testimonials/rafael-imas.jpeg'
 import ReyJoako from '../images/testimonials/rey-joako.jpg'
+import AdeosunAbiola from '../images/testimonials/adeosun-abiola.jpg'
 import Anonymous from '../images/testimonials/anonymous.jpg'
 
 const MentorshipPage = () => (
@@ -117,6 +118,15 @@ const MentorshipPage = () => (
           link="https://twitter.com/joako_reyes/status/1262493182757163009">
           <p class="mt-2 text-gray-800">
             Just had a 1-1 session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> and it was absolutely great. Serioulsy people of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hashtag_click" rel="noopener noreferrer" className="text-blue-500">#100DaysOfCode</a> you don't know how helpful it is to have someone experienced point you in the right direction. This guy does it for free! Thanks mate, I really appreciate it.
+          </p>
+        </TestimonaialCard>
+
+        <TestimonaialCard
+          name="Adeosun Abiola"
+          profilePic={AdeosunAbiola}
+          link="https://twitter.com/AbiTech105/status/1265264955969994758">
+          <p className="mt-2 text-gray-800">
+            I had 30 minutes session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> today and it was awesome. He really motivated me and also gave me some key important advice to make me better. I would like to suggest a 30 mins session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> to anyone out there that needs guidance in software development.
           </p>
         </TestimonaialCard>
 
