@@ -22,6 +22,7 @@ import SkillsImg from '../images/kelly-sikkema-N3o-leQyFsI-unsplash.jpg'
 import RafaelImas from '../images/testimonials/rafael-imas.jpeg'
 import ReyJoako from '../images/testimonials/rey-joako.jpg'
 import AdeosunAbiola from '../images/testimonials/adeosun-abiola.jpg'
+import JohnRinehart from '../images/testimonials/john-rinehart.png'
 import Anonymous from '../images/testimonials/anonymous.jpg'
 
 const MentorshipPage = () => (
@@ -98,7 +99,7 @@ const MentorshipPage = () => (
         <TestimonaialCard 
           name="Anon" 
           profilePic={Anonymous} 
-          link="https://twitter.com/joako_reyes/status/1262493182757163009">
+          link="https://hashtagcoder.dev/mentorship">
           <p class="mt-2 text-gray-800">
             Regarding choosing the management path, your input related what a manager/director does on a practical basis gave me a good perspective. Most of the people talk things in abstract - like managers do leadership/one on ones/team direction setting etc. but you talked more practical things which you do on day today basis which provided more clarity.
           </p>
@@ -129,6 +130,20 @@ const MentorshipPage = () => (
             I had 30 minutes session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> today and it was awesome. He really motivated me and also gave me some key important advice to make me better. I would like to suggest a 30 mins session with <a href="https://twitter.com/hashtagcoder" rel="noopener noreferrer" className="text-blue-500">@hashtagcoder</a> to anyone out there that needs guidance in software development.
           </p>
         </TestimonaialCard>
+
+        <TestimonaialCard
+          name="John Rinehart"
+          profilePic={JohnRinehart}
+          link="https://www.linkedin.com/in/johnrichardrinehart/">
+          <p className="mt-2 text-gray-800">
+            Sha is a pensive and sympathetic person - a valuable asset for someone like me who has a difficult time finding direction and focusing my energy. He isn't full of platitudes - he won't regurgitate faux-inspirational Vaynerchuk truisms or indulge those parts of your character that need attention/correction.
+          </p>
+
+          <p className="mt-2 text-gray-800">
+            He's been useful for me to serve as a backboard for my ideas and to keep me grounded as an engineer. I really value his time and his thoughts and I would encourage anyone to have a conversation with him. You almost certainly won't regret it.
+          </p>
+        </TestimonaialCard>
+
 
         <BookMentorshipHero />
       </div>
