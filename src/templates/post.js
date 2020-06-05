@@ -102,6 +102,8 @@ export default function PostTemplate({data}) {
 
           <MDXRenderer>{body}</MDXRenderer>
 
+          <p>I tweet about this type of thing a lot. If you enjoyed this article, <a href="https://twitter.com/hashtagcoder" target="_blank" rel="noopener noreferrer">you may enjoy following me</a>.</p>
+
           <div className="my-3 w-screen">
             <ShareButtons 
               url={site.siteMetadata.siteUrl + frontmatter.path} 
