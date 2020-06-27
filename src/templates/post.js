@@ -10,6 +10,7 @@ import SEO from '../components/seo'
 import TagLinks from '../components/tag-links'
 import RelatedPost from '../components/related-post'
 import ShareButtons from '../components/share-buttons'
+import BookSignup from '../components/book-signup'
 
 import '../css/post.css'
 
@@ -113,6 +114,8 @@ export default function PostTemplate({data}) {
         </div>
 
         <RelatedPost post={post} />
+
+        <BookSignup />
       </div>
     </Layout>
   )

@@ -159,6 +159,13 @@ module.exports = {
       },
     },
 
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://dev.us10.list-manage.com/subscribe/post?u=37b8cc71bc7e983ec70ce4913&amp;id=9bfaf00704'
+      }
+    }
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
