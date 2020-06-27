@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link, graphql} from 'gatsby'
 
-import '../css/thoughts.css'
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+import '../css/thoughts.css'
 
 export const dataQuery = graphql`
 {
