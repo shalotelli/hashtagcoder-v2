@@ -3,51 +3,79 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import '../css/world-class-teams.css'
 import CoverImage from '../images/world-class-cover.png'
 
 const WorldClassTeams = () => (
   <Layout>
     <SEO title="World Class Teams Create World Class Products" />
 
-    <div className="my-24 sm:my-32">
-      <div class="flex flex-col sm:flex-row w-full">
-        <div>
-          <img src={CoverImage} alt="World Class Teams Create World Class Products" />
+    <div className="my-24 sm:my-32 content">
+      <div class="flex flex-col items-center sm:flex-row w-full">
+        <div className="flex-none">
+          <img src={CoverImage} 
+            alt="World Class Teams Create World Class Products"
+            className="shadow-lg" />
         </div>
 
         <div className="ml-8">
-          <h3>A Guide for Tech Leaders Navigating Growth and Change</h3>
+          <div className="text-2xl sm:text-3xl mt-12 sm:mt-0">A Guide for Tech Leaders Navigating Growth and Change</div>
 
-          <div className="my-8">
-            <a className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 px-8 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full sm:w-auto text-center"
+          <div className="my-12">
+            <a className="button-link"
               href="https://gumroad.com/l/fcfDm"
               target="_blank"
               rel="noopener noreferrer">
-              Pre-order on Gumroad
+              Get your copy on Gumroad
             </a>
           </div>
+
+          <h3 className="mb-2">A Sample of What You'll Learn</h3>
+
+          <ul>
+            <li>
+              <strong>Creating a world class strategy</strong><br />
+              Prioritize the most important aspects of creating an incredible team and make the right decisions to set them up for success from the beginning.</li>
+
+            <li>
+              <strong>Growing your team with a solid Growth Map</strong><br />
+              Guide your teams professional and personal growth by identifying the most important accountabilities at each stage.</li>
+
+            <li>
+              <strong>Setting the right focus so that success becomes a side effect</strong><br />
+              Create a solid framework to identify the right priorities and set the most important goals for your team.</li>
+          </ul>
         </div>
       </div>
 
-      <div className="mt-8">
-        <p>In fast-paced environments, how can you deliver on your goals while achieving high-quality products at every release and have some time left to drive strategic decisions?</p>
+      <div className="mt-8 bg-gray-100 p-8 rounded-lg">
+        <h3 className="text-center mb-4">Frequently Asked Questions</h3>
 
-        <p className="font-bold">Build a great team - the key component of any engineering leaders' success.</p>
+        <ul>
+          <li>
+            <strong>Is this book only for technical managers?</strong><br />
+            Absolutely not! Whether you have a startup and are looking to establish your in house engineering team or you already have a team and are looking to optimize your processes, this book is for you.
+          </li>
 
-        <p>People don't come with documentation. In a world where technology is becoming the backbone of every company, knowing what to do when everyone is looking at you can feel brutal.</p>
+          <li>
+            <strong>What if I have no leadership experience?</strong><br />
+            This book introduces the main areas of focus and takes you through easy to follow processes to set you up for success. The only thing left is for you to learn from experience.
+          </li>
 
-        <p>In the tech industry, management can mean looking after people, products and finances and the learning curve is steep - especially when there are few tools, texts, and frameworks to help you. In this practical guide author Sha Alibhai (developer turned tech leader) takes you though how to start from the beginning, from strategizing and choosing the right technology and process frameworks, to how to plan, hire and onboard engineers and groom them to become world-class contributors.</p>
+          <li>
+            <strong>Is there a return policy?</strong><br />
+            I have a 30 day return policy. If you're not satisfied, reach out and you'll get a full refund.
+          </li>
 
-        <p>From how to constantly keep a pulse check on your team to identifying their highest priorities and roadblocks and create pragmatic solutions to drive them to success, you'll get actionable advice for approaching the various obstacles you'll encounter on your journey. This book is ideal whether you're creating a new team or trying to get better outcomes from an existing one. Pick up this book and learn how to become a better manager and leader in your organization.</p>
+          <li>
+            <strong>What do I get with my purchase?</strong><br />
+            You'll get a copy of the book in PDF, epub and mobi. Every purchase also includes lifetime access to updated versions of the book. For a minor additional fee, you'll also get access to all documents and templates to set you up (job descriptions, onboarding and offboarding plans, growth maps etc).
+          </li>
 
-        <h2>A Sneak Peak</h2>
-
-        <ul className="list-disc leading-loose ml-4">
-          <li className="mb-8"><strong>Creating a world class strategy:</strong> This chapter helps you prioritize the most important aspects of creating an incredible team and guides you through making the right decisions to set them up for success from the beginning.</li>
-
-          <li className="mb-8"><strong>Growing your team with a solid Growth Map:</strong> Clear, explicit communication is key to expectation setting. Cultivating great engineers doesn't happen by chance. This chapter sets you up, stage by stage, with everything you need to guide your teams professional and personal growth, including listing out accountabilities at each step.</li>
-
-          <li><strong>Success as a side effect starts with the right focus:</strong> If you set clear, attainable goals and constantly measure your successes or adjust course appropriately you'll always be able to track progress and achievements and growth will come naturally. This chapter gives you a solid framework by which to identify the right priorities and set the right goals for your team.</li>
+          <li>
+            <strong>What if I have more questions?</strong><br />
+            Reach out to me on twitter <a href="https://twitter.com/hashtagcoder" className="link" target="_blank" rel="noopener noreferrer">@hashtagcoder</a>.
+          </li>
         </ul>
       </div>
     </div>

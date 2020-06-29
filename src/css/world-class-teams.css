@@ -1,0 +1,23 @@
+.content ul {
+  @apply list-disc leading-loose ml-4;
+}
+
+.content li:not(:last-child) {
+  @apply mb-4;
+}
+
+.button-link {
+  @apply bg-blue-500 text-white font-bold py-4 px-8 border-b-4 border-blue-700 rounded w-full text-center;
+}
+
+.button-link:hover {
+@apply bg-blue-400 border-blue-500;
+}
+
+.link {
+  @apply underline text-blue-500;
+}
+
+.link:hover, .link:active {
+  @apply text-blue-800;
+}
