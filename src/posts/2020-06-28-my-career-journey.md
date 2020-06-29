@@ -13,7 +13,7 @@ I've always loved computers so when I was 10 I gifted a book that changed my lif
 
 No coding tutorial or bootcamp can prepare you for the feeling of having to tell your family that you don't know where your next paycheck is coming from because you didn't pass the job interview. Nothing can prepare you for the feeling of defeat as you realize you're going to have to shut down your business. But I've had to face this reality so many times in my life.
 
-I could feel sorry for myself about a lot things that have been unfair in my life, from being born to a working class family and not being able to afford the same experiences as a lot of my friends, rarely being able to find like-minded people and never feeling like I fit in, to having to close multiple businesses and feeling like a failure over and over again. But instead I forced myself to compartmentalize the negativity and instead focused on what I needed to do to be better.
+I could feel sorry for myself about a lot things that have been unfair in my life. From being born to a working class family and not being able to afford the same experiences as others to having to close multiple businesses. I could have felt like a failure over and over again. But instead I forced myself to compartmentalize the negativity and instead focus on what I needed to do to be better.
 
 ## Starting my first business
 
