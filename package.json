@@ -2,7 +2,7 @@
   "name": "hashtagcoder-v2",
   "private": true,
   "description": "Technical tutorials, development and career advice predominantly focusing on JavaScript",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Sha Alibhai <shalotelli@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -42,7 +42,14 @@
     "typeface-merriweather": "0.0.72"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/react": "^10.4.7",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.5.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1",
     "tailwindcss": "^1.2.0"
   },
   "keywords": [
@@ -56,7 +63,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "deploy": "git checkout production && git merge master && git push && git checkout master"
   },
   "repository": {
