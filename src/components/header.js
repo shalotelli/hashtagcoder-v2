@@ -1,7 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import PropTypes from 'prop-types'
 import {Link, useStaticQuery, graphql} from 'gatsby'
+import Toggle from 'react-toggle'
+import {ThemeContext} from '../context/theme-context'
 
+import 'react-toggle/style.css'
 import '../css/header.css'
 import logo from '../images/hashtagcoder-icon.png'
 
@@ -26,6 +29,7 @@ const socialIconsMap = {
 export const PureHeader = ({data, siteTitle}) => {
   const [showNav, setShowNav] = useState(false)
   const [navAnimation, setNavAnimation] = useState('fadeInRight')
+  const {theme, setTheme} = useContext(ThemeContext)
 
   const toggleShowNav = () => {
     let animation = 'fadeIn'
@@ -41,6 +45,10 @@ export const PureHeader = ({data, siteTitle}) => {
     
     setNavAnimation(animation)
     setTimeout(() => setShowNav(!showNav), timeout)
+  }
+
+  const handleThemeToggle = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
@@ -85,6 +93,12 @@ export const PureHeader = ({data, siteTitle}) => {
               </li>
             ))}
           </div>
+
+          <Toggle
+            id="theme-toggle"
+            checked={theme === 'light'}
+            onChange={handleThemeToggle}
+      />
         </ul>
       </header>
     </div>
