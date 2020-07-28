@@ -42,10 +42,10 @@ const AppConfig = {
       icon: 'twitter' 
     },
   
-    {
-      href: 'https://www.instagram.com/hashtag_coder/',
-      icon: 'instagram' 
-    },
+    // {
+    //   href: 'https://www.instagram.com/hashtag_coder/',
+    //   icon: 'instagram' 
+    // },
   
     {
       href: 'https://www.linkedin.com/in/sha-alibhai/',
