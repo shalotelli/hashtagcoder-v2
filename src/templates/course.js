@@ -34,8 +34,8 @@ export default function CourseTemplate({data}) {
         <MDXRenderer>{body}</MDXRenderer>
 
         {frontmatter.videos.map((video, i) => (
-          <div className="mb-10">
-            <YouTube video={video} key={i} />
+          <div className="mb-10" key={i}>
+            <YouTube video={video} />
           </div>
         ))}
       </div>

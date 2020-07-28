@@ -5,3 +5,27 @@
 .navigation li a.hoverable:hover {
   @apply border-b border-gray-400 border-dashed;
 }
+
+.react-toggle-track {
+  @apply bg-gray-400;
+}
+
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  @apply bg-gray-800;
+}
+
+.react-toggle--checked .react-toggle-track {
+  @apply bg-blue-500;
+}
+
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  @apply bg-blue-700;
+}
+
+.react-toggle-thumb {
+  @apply border-gray-500;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  @apply border-blue-500;
+}

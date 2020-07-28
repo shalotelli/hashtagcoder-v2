@@ -4,7 +4,7 @@
 }
 
 .styled-hr:before {
-  @apply text-gray-200 text-center text-2xl absolute bg-white py-0 px-5;
+  @apply text-gray-200 text-center text-2xl absolute bg-primary py-0 px-5;
   content: attr(title);
 }
 

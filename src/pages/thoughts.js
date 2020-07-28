@@ -29,8 +29,8 @@ const ThoughtsPage = ({data}) => {
 
         <ul className="thoughts-list">
         {thoughts.map((link, i) => (
-          <li>
-            <Link to={link.url} key={i}>{link.title}</Link>
+          <li key={i}>
+            <Link to={link.url}>{link.title}</Link>
             <p>{link.description}</p>
             <hr />
           </li>

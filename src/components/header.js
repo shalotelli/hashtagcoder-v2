@@ -16,7 +16,7 @@ import {
   faGithub,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 const socialIconsMap = {
   twitter: faTwitter,
@@ -51,6 +51,13 @@ export const PureHeader = ({data, siteTitle}) => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
+  const toggleStyles = 'text-white text-xs'
+
+  const toggleIcons = {
+    checked: <FontAwesomeIcon icon={faMoon} className={toggleStyles} />, 
+    unchecked: <FontAwesomeIcon icon={faSun} className={toggleStyles} />
+  }
+
   return (
     <div className="absolute top-0 z-10 w-full">
       <header className="p-2 sm:p-8 sm:flex justify-between items-center">
@@ -71,7 +78,7 @@ export const PureHeader = ({data, siteTitle}) => {
           </div>
         </div>
 
-        <ul className={`navigation bg-gray-200 rounded sm:bg-white p-2 sm:p-0 sm:flex animated ${navAnimation} ${showNav ? 'relative' : 'hidden'}`}>
+        <ul className={`navigation bg-secondary rounded sm:bg-transparent p-2 sm:p-0 sm:flex animated ${navAnimation} ${showNav ? 'relative' : 'hidden'}`}>
           {data.appConfig.navigation.filter(x => x.active).map(link => (
             <li className="mb-2 sm:mb-0" key={link.page}>
               <Link to={`/${link.href}`} 
@@ -96,9 +103,9 @@ export const PureHeader = ({data, siteTitle}) => {
 
           <Toggle
             id="theme-toggle"
-            checked={theme === 'light'}
+            checked={theme === 'dark'}
             onChange={handleThemeToggle}
-      />
+            icons={toggleIcons} />
         </ul>
       </header>
     </div>
