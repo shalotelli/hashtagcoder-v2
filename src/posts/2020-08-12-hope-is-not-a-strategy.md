@@ -1,6 +1,6 @@
 ---
 path: '/blog/hope-is-not-a-strategy'
-date: '2020-08-05'
+date: '2020-08-12'
 title: 'Hope is not a strategy when building a team'
 tags: ['career', 'strategy', 'leadership']
 cover: ../images/cover/jeshoots-com-fzOITuS1DIQ-unsplash.jpg
