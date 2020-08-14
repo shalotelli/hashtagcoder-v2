@@ -7,7 +7,7 @@ import Post from '../components/post'
 
 export const dataQuery = graphql`
 {
-  allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
+  allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
     edges {
       node {
         frontmatter {
@@ -43,7 +43,7 @@ const BlogPage = ({data}) => (
 
     <div className="my-16 sm:my-32">
       <div className="flex flex-wrap justify-center">
-        {data.allMdx.edges.map(({node: post}, i) => <Post data={post} key={i} />)}
+        {data.allMdx.edges.filter(x => new Date(x.node.frontmatter.date) < new Date()).map(({node: post}, i) => <Post data={post} key={i} />)}
       </div>
     </div>
   </Layout>

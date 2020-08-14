@@ -122,21 +122,23 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+              return allMdx.edges
+                .filter(x => new Date(x.node.frontmatter.date) < new Date())
+                .map(edge => {
+                  return Object.assign({}, edge.node.frontmatter, {
+                    description: edge.node.excerpt,
+                    date: edge.node.frontmatter.date,
+                    url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                    guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                    custom_elements: [{ 'content:encoded': edge.node.html }],
+                  })
                 })
-              })
             },
             query: `
               {
                 allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}
+                  filter: {fields: {collection: {eq: "posts"}}}
                 ) {
                   edges {
                     node {

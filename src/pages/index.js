@@ -21,7 +21,7 @@ export const dataQuery = graphql`
       description
     }
   }
-  allMdx(limit: 4, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
+  allMdx(limit: 4, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
     edges {
       node {
         frontmatter {
@@ -51,7 +51,7 @@ export const dataQuery = graphql`
 `
 
 const IndexPage = ({data}) => {
-  const recentBlogPosts = data.allMdx.edges
+  const recentBlogPosts = data.allMdx.edges.filter(x => new Date(x.node.frontmatter.date) < new Date())
   const recentVideos = data.appConfig.recentVideos
   const thoughts = data.appConfig.thoughts
 

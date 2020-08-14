@@ -6,7 +6,7 @@ const RelatedPost = ({post}) => {
   const {allMdx: data} = useStaticQuery(
     graphql`
     query data {
-      allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}, isFuture: {eq: false}}) {
+      allMdx(limit: 1000, sort: {order: DESC, fields: frontmatter___date}, filter: {fields: {collection: {eq: "posts"}}}) {
         edges {
           node {
             frontmatter {
@@ -26,7 +26,9 @@ const RelatedPost = ({post}) => {
 
   function calculateRelatedPost() {
     const tags = post.frontmatter.tags
-    const posts = data.edges
+    const posts = data.edges.filter(x => 
+      new Date(x.node.frontmatter.date) < new Date()
+    )
 
     let mostRelevantPosts = []
     let highestRelevancy = 0
