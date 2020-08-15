@@ -116,6 +116,42 @@ const AppConfig = {
       title: 'Supporting teams with professional growth maps',
       url: '/blog/engineering-growth-map',
       description: 'If you want to build something great, it starts with great people. Nurturing great contributors doesn\'t happen by chance. Aside from helping them develop core skills, it takes support, focus and direction. The best way to pave this golden path is by explicitly setting out expectations on both sides. Here\'s how I\'ve done it.'
+    },
+
+    {
+      title: 'The true cost of outsourcubg development',
+      url: '/blog/true-cost-of-outsourcing',
+      description: 'Outsourcing is a popular option for individuals and organizations trying to bootstrap their product in a cost effective way. Comparing the cost per unit of work at face value for a team in a developing country vs a developed country usually leads you to believe that there\'s big savings involved. But this isn\'t the whole story.'
+    },
+
+    {
+      title: 'My Career',
+      url: '/blog/my-career-journey',
+      description: 'No coding tutorial or bootcamp can prepare you for the feeling of having to tell your family that you don\'t know where your next paycheck is coming from because you didn\'t pass the job interview. '
+    },
+    
+    {
+      title: 'Being a specialist or a generalist',
+      url: '/blog/specialist-vs-generalist',
+      description: 'At different points of your teams evolutions you\'re going to need different skillsets. Sometimes you\'ll need generalists that can do a bit of everything and other times you\'ll need those surgical specialists that are really good with a subset of your tech stack.'
+    },
+    
+    {
+      title: 'Building a strategy for your team',
+      url: '/blog/hope-is-not-a-strategy',
+      description: 'The most important trait of a world class team is that everyone is rowing in the same direction. This doesn\'t happen by chance. Nothing has happened by chance for me. You have to create a plan, constantly evaluate it and be explicit about every decision you make. It takes a strong level of awareness to not only create a world class team, but also make sure they stay that way.'
+    },
+    
+    {
+      title: 'The best tech stack for your project',
+      url: '/blog/best-tech-stack-for-your-project-in-2020',
+      description: 'There\'s 2 philosophies when it comes to choosing the right tech stack.'
+    },
+    
+    {
+      title: 'My own team strategy',
+      url: '/blog/reflecting-on-my-team-building-strategy',
+      description: 'Strategy is not a lengthy action plan. It is the evolution of a central idea through continually changing circumstances.'
     }
   ]
 }
